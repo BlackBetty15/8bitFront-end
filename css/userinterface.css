@@ -1,0 +1,197 @@
+@font-face {
+    font-family:'WebpixelBlack';
+    src: url('../fonts/webpixel/fontie-package/webpixelbitmap-Black.eot');
+    src: url('../fonts/webpixel/fontie-package/webpixelbitmap-Black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/webpixel/fontie-package/webpixelbitmap-Black.woff2') format('woff2'),
+    url('../fonts/webpixel/fontie-package/webpixelbitmap-Black.woff') format('woff'),
+    url('../fonts/webpixel/fontie-package/webpixelbitmap-Black.svg#webpixelbitmap-Black') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2265;
+}
+@font-face {
+    font-family:'WebpixelRegular';
+    src: url('../fonts/webpixel/light/webpixelbitmap.eot');
+    src: url('../fonts/webpixel/light/webpixelbitmap.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/webpixel/light/webpixelbitmap.woff2') format('woff2'),
+    url('../fonts/webpixel/light/webpixelbitmap.woff') format('woff'),
+    url('../fonts/webpixel/light/webpixelbitmap.svg#webpixelbitmap') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2265;
+}
+html,body{
+    position: relative;
+    padding:0;
+    margin: 0;
+    height: 100%;
+    background-color: #b9d151;
+    font-family: WebpixelRegular, monospace;
+    font-size: 15px;
+}
+*:not(textarea), *:not(input){
+    cursor: default;
+}
+header{
+    width: 100%;
+    min-width: 410px;
+    height: auto;
+}
+#mainnav{
+    background-color: #297045;
+    border: none;
+    display: block;
+    height: auto;
+    border-radius: 0;
+    min-width: 600px;
+}
+#bottomNav{
+    background-color: #297045;
+    border: none;
+    border-radius: 0;
+    clear: both;
+    position: relative;
+    z-index: 10;
+    min-width: 600px;
+    height: 150px;
+    margin-bottom: -3em;
+}
+
+#logo{
+    height: auto;
+}
+
+#logoSlika{
+    max-height: 225px;
+    max-width:620px;
+    margin: auto;
+    padding: 10px;
+}
+
+
+#menu{
+    height:350px;
+    width: 100%;
+
+}
+#menuChose {
+    background-image: url("../images/meni.png");
+    width: 500px;
+    padding: 50px;
+    height: 350px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin:  auto;
+}
+
+#menuChose table{
+    height:120px;
+    margin:  auto;
+    font-family: WebpixelRegular, monospace;
+    cursor: default;
+}
+
+#menuChose .ostatak  {
+    color:#94d052;
+    height:1rem;
+    margin:  0 auto;
+    font-size: 1.667rem;
+    text-align: center;
+    border-spacing: 0;
+    padding:0;
+    font-family: WebpixelBlack, monospace;
+
+}
+.table-responsive{
+    font-size: 14px;
+    border: none;
+}
+#menuChose .ostatak td:nth-child(2):hover{
+    background-color: #94d052;
+    color: #000f1e;
+}
+#menuChose .ostatak td:nth-child(2) a:hover {
+    background-color: #94d052;
+    color:#000f1e;
+}
+
+#zaglavlje{
+    font-size: 35px;
+    height:20px;
+    color:#94d052;
+    margin: 0;
+    padding:0;
+    text-align: center;
+
+}
+#bottomNav p{
+    margin: auto;
+    text-align: center;
+    font-size:20px;
+    color:#94d052;
+}
+#DownButton{
+
+    font-family: WebpixelRegular, monospace;
+    color: #94d052;
+    background-color: #297045;
+    height:50px;
+    width:50px;
+    position: absolute;
+    bottom: -9px;
+    right:0;
+    left:0;
+    border-radius:50%;
+    font-size:30px;
+    margin: 0 auto;
+    line-height: 80px;
+    text-align: center;
+    cursor: default;
+}
+#DownButton:hover{
+    color: #000f1e;
+    
+}
+.navbar-header{
+    width: 100%;
+}
+#dropdown{
+    width: 100%;
+    height:150px;
+    display: none;
+}
+
+#copyright{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+}
+#about{
+    background-color: floralwhite;
+    width:100%;
+    height: 800px;
+}
+
+.pageHeader{
+    color: #9a3b39;
+    font-weight:bolder;
+    text-align: left;
+    font-size:60px;
+    padding:15px;
+}
+.aboutArticle{
+    font-size:25px;
+    color:#9a3b39;
+    font-weight: bold;
+}
+.aboutParagraph{
+    text-align: justify;
+    text-indent:35px;
+}
+.signature{
+    font-size:30px;
+    font-style: italic;
+}
