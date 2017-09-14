@@ -42,6 +42,8 @@
                             <input type="submit" id="Submit" value="Prijavi se"/>
                         </div>
                     </form>
+                   <div><a href="index.php">Vrati se na prethodnu stranicu</a></div>
+
                </div>
             </div>
             <div class="col-xs-2 col-md-4"></div>
