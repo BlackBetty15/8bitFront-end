@@ -154,6 +154,9 @@
                 <th class="peopleTableHead">Obriši</th>
                 <th class="peopleTableHead">Detalji</th>
             </tr>
+
+
+
         </table>
 
     </div>
@@ -269,12 +272,11 @@
         <legend>Sanduče:</legend>
 
         <div class="row">
-
-
+            <div class="container-fluid">
+                <?php include_once 'mailbox.php'?>
+            </div>
         </div>
     </div>
-
-
 </div>
 
 

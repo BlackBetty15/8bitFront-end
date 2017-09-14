@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="css/adminpanel.css">
+    <link href="css/mailStyle.css" rel="stylesheet">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>

@@ -1,0 +1,65 @@
+#mailContainer{
+
+
+}
+#leftSideBar{
+    background-color: #366337;
+    min-height: 42.75rem;
+    padding: 0;
+    display: table-cell;
+
+}
+#leftSideBar ul{
+    width: 100%;
+    list-style-type: none;
+    font-size:1rem;
+    margin: auto;
+    padding: 0.125rem;
+}
+#leftSideBar ul li{
+    padding:0.250rem;
+    margin: 0.5rem 0;
+    width: 100%;
+}
+#leftSideBar ul li:hover{
+    background-color: #d5deac;
+    color: black;
+ }
+
+#topNavigation{
+    background-color: #366337;
+    min-height:2.5rem;
+}
+#topNavigation table tr th{
+    text-align: center;
+    vertical-align: bottom;
+    border:none;
+    line-height:1rem;
+}
+#mailContent{
+    background-color: whitesmoke;
+    min-height: 42.75rem;
+    max-height: 42.75rem;
+    overflow: scroll;
+}
+.messageHeader{
+    background-color:#344e33;
+    border:none;
+}
+tr th{
+    border:none!important;
+}
+#mailContent > table > tbody > tr > th:nth-child(1), #mailContent > table > tbody > tr > th:nth-child(5){
+    width:10%;
+}
+#mailContent > table > tbody > tr > th:nth-child(2){
+    width:20%;
+}
+
+#tableBodyInbox tr{
+    background-color:#d5deac;
+    color:black;
+}
+.table>tbody>tr>td{
+    border-color: #2b542c !important;
+}

@@ -16,8 +16,8 @@
 
             <input type="text" class="formField important" id="lName" name="last_name" placeholder="Prezime">
 
-            <input type="email" class="formField important" id="eMail" name="email" placeholder="E-mail"
-            >
+            <input type="email" class="formField important" id="eMail" name="email" placeholder="E-mail">
+            <input type="text" class="formField important" id="username" name="username" placeholder="Korisničko ime">
 
             <input type="password" class="formField important passOrg" id="pwd" name="pwd" placeholder="Lozinka"
                    onkeyup="checkPwd(event, 1)">
