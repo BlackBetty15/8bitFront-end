@@ -40,7 +40,7 @@
     background-color: whitesmoke;
     min-height: 42.75rem;
     max-height: 42.75rem;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 .messageHeader{
     background-color:#344e33;
@@ -62,4 +62,25 @@ tr th{
 }
 .table>tbody>tr>td{
     border-color: #2b542c !important;
+}
+#mailContent::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+#mailContent::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+#mailContent::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+#mailContent::-webkit-scrollbar-thumb {
+    background-color: #55652e;
+    height:1rem;
+    outline: 1px solid #2d5e2d;
+    border-radius:0.5rem;
+
+}
+#tableHeader{
+    position: static;
 }

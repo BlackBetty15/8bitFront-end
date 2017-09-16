@@ -6,6 +6,7 @@ body {
     color: #EFF1F9;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-size: 1rem;
 }
 .forma{
     min-height: 31.25rem;
