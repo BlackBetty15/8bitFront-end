@@ -2,11 +2,12 @@
 
 require_once 'Connection.php';
 require_once 'Cours.php';
-
+require_once 'User.php';
 
 if (!isset($_GET['action'])){
     header("HTTP/1.1 403 Žao nam je, nemate pristup ovoj stranici... ");
 }
+else{
 $action = trim($_GET['action']);
 
 
@@ -58,6 +59,20 @@ switch($action){
 
         break;
     }
+    case 'add-user':{
+        $firstName=trim($_POST['first_name']);
+        $lastName=trim($_POST['last_name']);
+        $username=trim($_POST['username']);
+        $email=trim($_POST['email']);
+        $password=trim($_POST['password']);
+        $status=trim($_POST['status']);
+        $role=trim($_POST['role']);
 
+        $response=User::createUser($firstName,$lastName,$username,$password,$email,$status,$role);
+
+        echo $response;
+    }
+
+}
 }
 ?>

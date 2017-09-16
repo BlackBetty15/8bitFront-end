@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37d82930-8f01-4c53-98f4-f9192b711426" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajaxcall.js" afterPath="$PROJECT_DIR$/ajaxcall.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testfile.php" afterPath="$PROJECT_DIR$/testfile.php" />
     </list>
     <ignored path="diplomski.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,18 +51,18 @@
       <file leaf-file-name="Connection.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Connection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.0">
+            <state vertical-scroll-proportion="-30.73077">
               <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cours.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Cours.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Cours.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5749559">
-              <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+            <state vertical-scroll-proportion="-3.2545455">
+              <caret line="99" column="20" selection-start-line="99" selection-start-column="14" selection-end-line="99" selection-end-column="20" />
               <folding>
                 <marker date="1505578587187" expanded="true" signature="437:467" placeholder="SELECT * FRO... kursevi" />
                 <marker date="1505578587187" expanded="true" signature="939:952" placeholder="SELECT * FRO... " />
@@ -84,8 +85,8 @@
       <file leaf-file-name="testfile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testfile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.307693">
-              <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="28" />
+            <state vertical-scroll-proportion="-2.6153846">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -94,21 +95,11 @@
       <file leaf-file-name="ajaxcall.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ajaxcall.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+            <state vertical-scroll-proportion="-0.75438595">
+              <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
               <folding>
                 <element signature="n#!!doc;n#myFunction#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.923077">
-              <caret line="83" column="88" selection-start-line="83" selection-start-column="88" selection-end-line="83" selection-end-column="88" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -129,6 +120,42 @@
             <state vertical-scroll-proportion="-6.5384617">
               <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9100529">
+              <caret line="144" column="63" selection-start-line="144" selection-start-column="63" selection-end-line="144" selection-end-column="63" />
+              <folding>
+                <marker date="1505588466400" expanded="true" signature="754:853" placeholder="SELECT `id`,... korisnici" />
+                <marker date="1505588466400" expanded="true" signature="1262:1348" placeholder="SELECT id, i... korisnici" />
+                <marker date="1505588466400" expanded="true" signature="1262:1349" placeholder="SELECT `id`,... korisnici" />
+                <marker date="1505588466400" expanded="true" signature="1890:2007" placeholder="INSERT INTO korisnici... " />
+                <marker date="1505588466400" expanded="true" signature="1890:2025" placeholder="INSERT INTO korisnici... " />
+                <marker date="1505588466400" expanded="true" signature="1890:2039" placeholder="INSERT INTO korisnici... " />
+                <marker date="1505588466400" expanded="true" signature="1890:2041" placeholder="INSERT INTO korisnici... " />
+                <marker date="1505588466400" expanded="true" signature="1890:2057" placeholder="INSERT INTO korisnici... " />
+                <marker date="1505588466400" expanded="true" signature="1890:2070" placeholder="INSERT INTO korisnici... " />
+                <marker date="1505588466400" expanded="true" signature="1890:2120" placeholder="INSERT INTO `korisnici`... " />
+                <marker date="1505588466400" expanded="true" signature="1890:5619" placeholder="INSERT INTO korisnici... " />
+                <marker date="1505588466400" expanded="true" signature="1890:5745" placeholder="INSERT INTO korisnici... " />
+                <marker date="1505588466400" expanded="true" signature="2418:2443" placeholder="UPDATE `kori... " />
+                <marker date="1505588466400" expanded="true" signature="2418:2469" placeholder="UPDATE `kori... " />
+                <marker date="1505588466400" expanded="true" signature="2784:2838" placeholder="UPDATE `kori... " />
+                <marker date="1505588466400" expanded="true" signature="3155:3195" placeholder="SELECT pwd_h... korisnici" />
+                <marker date="1505588466400" expanded="true" signature="3784:3837" placeholder="UPDATE koris... " />
+                <marker date="1505588466400" expanded="true" signature="4405:4433" placeholder="UPDATE koris... " />
+                <marker date="1505588466400" expanded="true" signature="4405:4440" placeholder="UPDATE koris... " />
+                <marker date="1505588466400" expanded="true" signature="4405:4450" placeholder="UPDATE koris... " />
+                <marker date="1505588466400" expanded="true" signature="4767:4810" placeholder="UPDATE koris... " />
+                <marker date="1505588466400" expanded="true" signature="5103:5134" placeholder="DELETE FROM " />
+                <marker date="1505588466400" expanded="true" signature="5103:5135" placeholder="DELETE FROM " />
+                <marker date="1505588466400" expanded="true" signature="5439:5465" placeholder="SELECT * FRO... role" />
+                <marker date="1505588466400" expanded="true" signature="5535:5567" placeholder="SELECT name role" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -180,9 +207,10 @@
         <option value="$PROJECT_DIR$/Connection.php" />
         <option value="$PROJECT_DIR$/templates/Cours.php" />
         <option value="$PROJECT_DIR$/test.html" />
-        <option value="$PROJECT_DIR$/testfile.php" />
         <option value="$PROJECT_DIR$/Cours.php" />
         <option value="$PROJECT_DIR$/ajaxcall.js" />
+        <option value="$PROJECT_DIR$/testfile.php" />
+        <option value="$PROJECT_DIR$/User.php" />
       </list>
     </option>
   </component>
@@ -377,13 +405,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../miniProjekat/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="98" column="75" selection-start-line="98" selection-start-column="3" selection-end-line="98" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/adminpanel.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -693,25 +714,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.0">
-          <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.923077">
+        <state vertical-scroll-proportion="0.73015875">
           <caret line="83" column="88" selection-start-line="83" selection-start-column="88" selection-end-line="83" selection-end-column="88" />
           <folding />
         </state>
@@ -727,26 +732,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ajaxcall.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        <state vertical-scroll-proportion="-0.75438595">
+          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
           <folding>
             <element signature="n#!!doc;n#myFunction#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/testfile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.307693">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="28" />
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Cours.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5749559">
-          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+        <state vertical-scroll-proportion="-3.2545455">
+          <caret line="99" column="20" selection-start-line="99" selection-start-column="14" selection-end-line="99" selection-end-column="20" />
           <folding>
             <marker date="1505578587187" expanded="true" signature="437:467" placeholder="SELECT * FRO... kursevi" />
             <marker date="1505578587187" expanded="true" signature="939:952" placeholder="SELECT * FRO... " />
@@ -761,6 +774,48 @@
             <marker date="1505578587187" expanded="true" signature="2719:2744" placeholder="UPDATE kurse... " />
             <marker date="1505578587187" expanded="true" signature="2719:2771" placeholder="UPDATE kurse... " />
             <marker date="1505578587187" expanded="true" signature="2719:2882" placeholder="UPDATE kurse... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-30.73077">
+          <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9100529">
+          <caret line="144" column="63" selection-start-line="144" selection-start-column="63" selection-end-line="144" selection-end-column="63" />
+          <folding>
+            <marker date="1505588466400" expanded="true" signature="754:853" placeholder="SELECT `id`,... korisnici" />
+            <marker date="1505588466400" expanded="true" signature="1262:1348" placeholder="SELECT id, i... korisnici" />
+            <marker date="1505588466400" expanded="true" signature="1262:1349" placeholder="SELECT `id`,... korisnici" />
+            <marker date="1505588466400" expanded="true" signature="1890:2007" placeholder="INSERT INTO korisnici... " />
+            <marker date="1505588466400" expanded="true" signature="1890:2025" placeholder="INSERT INTO korisnici... " />
+            <marker date="1505588466400" expanded="true" signature="1890:2039" placeholder="INSERT INTO korisnici... " />
+            <marker date="1505588466400" expanded="true" signature="1890:2041" placeholder="INSERT INTO korisnici... " />
+            <marker date="1505588466400" expanded="true" signature="1890:2057" placeholder="INSERT INTO korisnici... " />
+            <marker date="1505588466400" expanded="true" signature="1890:2070" placeholder="INSERT INTO korisnici... " />
+            <marker date="1505588466400" expanded="true" signature="1890:2120" placeholder="INSERT INTO `korisnici`... " />
+            <marker date="1505588466400" expanded="true" signature="1890:5619" placeholder="INSERT INTO korisnici... " />
+            <marker date="1505588466400" expanded="true" signature="1890:5745" placeholder="INSERT INTO korisnici... " />
+            <marker date="1505588466400" expanded="true" signature="2418:2443" placeholder="UPDATE `kori... " />
+            <marker date="1505588466400" expanded="true" signature="2418:2469" placeholder="UPDATE `kori... " />
+            <marker date="1505588466400" expanded="true" signature="2784:2838" placeholder="UPDATE `kori... " />
+            <marker date="1505588466400" expanded="true" signature="3155:3195" placeholder="SELECT pwd_h... korisnici" />
+            <marker date="1505588466400" expanded="true" signature="3784:3837" placeholder="UPDATE koris... " />
+            <marker date="1505588466400" expanded="true" signature="4405:4433" placeholder="UPDATE koris... " />
+            <marker date="1505588466400" expanded="true" signature="4405:4440" placeholder="UPDATE koris... " />
+            <marker date="1505588466400" expanded="true" signature="4405:4450" placeholder="UPDATE koris... " />
+            <marker date="1505588466400" expanded="true" signature="4767:4810" placeholder="UPDATE koris... " />
+            <marker date="1505588466400" expanded="true" signature="5103:5134" placeholder="DELETE FROM " />
+            <marker date="1505588466400" expanded="true" signature="5103:5135" placeholder="DELETE FROM " />
+            <marker date="1505588466400" expanded="true" signature="5439:5465" placeholder="SELECT * FRO... role" />
+            <marker date="1505588466400" expanded="true" signature="5535:5567" placeholder="SELECT name role" />
           </folding>
         </state>
       </provider>
