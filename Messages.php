@@ -39,5 +39,16 @@ class Messages
         VALUES ('".$subject."','".$sender."','".$senderFirstName."','".$senderLastName."',0,'".$message."',0)";
     }
 
+    public static function listAllMessages(){
+
+
+    }
+    public static function listAllRespondedMessages(){}
+    public static function getOneMessage($id){}
+    public static function getReadMessages(){}
+    public static function getUnreadMessages(){}
+    public static function respondedMessages(){}
+    public static function deleteMessages(){}
+
 //SELECT  id ,  naslov ,  posiljalac ,  procitana ,  poruka ,  odgovoreno ,  tip ,  datum  FROM  posta  WHERE 1
 }
