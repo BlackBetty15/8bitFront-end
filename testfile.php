@@ -71,7 +71,28 @@ switch($action){
         $response=User::createUser($firstName,$lastName,$username,$password,$email,$status,$role);
 
         echo $response;
+        break;
     }
+    case 'delete-user':{break;}
+    case 'change-user-first-name':{break;}
+    case 'change-user-last-name':{break;}
+    case 'change-user-status':{break;}
+    case 'change-user-role':{break;}
+    case 'change-user-password':{break;}
+    case 'get-all-users':{break;}
+    case 'get-specific-user':{break;}
+    case 'get-user-role':{break;}
+    case 'get-all-roles':{break;}
+    case 'get-all-lessons':{break;}
+    case 'get-all-lessons-of-cours':{break;}
+    case 'get-all-active-lessons':{break;}
+    case 'change-lessons-name':{break;}
+    case 'change-lessons-status':{break;}
+    case 'change-lessons-code':{break;}
+    case 'change-lessons-description':{break;}
+    case 'delete-lesson':{break;}
+    case 'add-new-lesson':{break;}
+    case 'change-lessons-cours':{break;}
 
 }
 }
