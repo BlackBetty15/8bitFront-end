@@ -156,7 +156,7 @@ class User
 
         $now='';
         if($status==1){
-            $now='dktivirali';
+            $now='aktivirali';
         }
         else{
             $now='deaktivirali';
