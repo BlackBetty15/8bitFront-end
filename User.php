@@ -220,4 +220,31 @@ class User
         }
     }
 
+    public static function login($username,$password){
+
+
+        $options = [
+            'cost' => 12,
+            'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
+        ];
+
+            $psd=password_hash($password,PASSWORD_BCRYPT,$options);
+
+
+            $qry="SELECT * FROM korisnici WHERE korisnicko_ime= '".$username."' AND pass= '".$psd."'";
+
+            $results = Connection::queryRequest($qry);
+            $error="Nema đokice"; /* Sredi đokicu*/
+
+            $validacija=Connection::emptyQueryResults($results);
+            if($validacija==1){
+
+                return $results->fetch_assoc();
+            }
+            else
+                return $error;
+
+
+        }
+
 }
