@@ -73,16 +73,77 @@ switch($action){
         echo $response;
         break;
     }
-    case 'delete-user':{break;}
-    case 'change-user-first-name':{break;}
-    case 'change-user-last-name':{break;}
-    case 'change-user-status':{break;}
-    case 'change-user-role':{break;}
-    case 'change-user-password':{break;}
-    case 'get-all-users':{break;}
-    case 'get-specific-user':{break;}
-    case 'get-user-role':{break;}
-    case 'get-all-roles':{break;}
+    case 'delete-user':{
+        $id=trim($_POST['id']);
+
+        $response=User::deleteUser($id);
+        echo $response;
+        break;
+    }
+    case 'change-user-first-name':{
+        $firstName=trim($_POST['first_name']);
+        $id=trim($_POST['id']);
+
+        $response=User::changeFirstName($id,$firstName);
+        echo $response;
+
+        break;
+    }
+    case 'change-user-last-name':{
+        $lastName=trim($_POST['last_name']);
+        $id=trim($_POST['id']);
+
+        $response=User::changeLastName($id,$lastName);
+        echo $response;
+
+        break;}
+    case 'change-user-status':{
+        $id=trim($_POST['id']);
+        $status=trim($_POST['status']);
+
+        $response=User::changeUsersStatus($id,$status);
+        echo $response;
+        break;}
+
+    case 'change-user-role':{
+        $id=trim($_POST['id']);
+        $role=trim($_POST['role']);
+
+        $response=User::changeUsersRole($id,$role);
+        echo $response;
+
+        break;}
+    case 'change-user-password':{
+        $old=trim($_POST['old_password']);
+        $new=trim($_POST['new_password']);
+        $id=trim($_POST['id']);
+
+        $response=User::changePassword($id,$old,$new);
+        echo $response;
+
+        break;}
+    case 'get-all-users':{
+
+        $response=User::getAllUsers();
+        echo $response;
+
+        break;}
+
+    case 'get-specific-user':{
+
+        $id=trim($_POST['id']);
+        $response=User::getSpecificUser($id);
+        return $response;
+
+        break;}
+    case 'get-user-role':{
+        $id=trim($_POST['id']);
+        $response=User::getUserRole($id);
+        break;}
+    case 'get-all-roles':{
+          $response=User::getAllRoles();
+        echo $response;
+        break;}
     case 'get-all-lessons':{break;}
     case 'get-all-lessons-of-cours':{break;}
     case 'get-all-active-lessons':{break;}
@@ -93,7 +154,19 @@ switch($action){
     case 'delete-lesson':{break;}
     case 'add-new-lesson':{break;}
     case 'change-lessons-cours':{break;}
-
+    case 'get-all-messages':{break;}
+    case 'delete-messages':{break;}
+    case 'mark-as-unread-messages':{break;}
+    case 'send-message':{break;}
+    case 'get-responded-messages':{break;}
+    case 'get-unresponded-messages':{break;}
+    case 'open-message':{break;}
+    case 'mark-as-read-message':{break;}
+//    case '':{break;}
+//    case '':{break;}
+//    case '':{break;}
+//    case '':{break;}
+//    case '':{break;}
 }
 }
 ?>
