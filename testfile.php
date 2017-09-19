@@ -125,7 +125,7 @@ switch($action){
     case 'get-all-users':{
 
         $response=User::getAllUsers();
-        echo $response;
+        echo (json_encode($response));
 
         break;}
 
@@ -133,35 +133,170 @@ switch($action){
 
         $id=trim($_POST['id']);
         $response=User::getSpecificUser($id);
-        return $response;
+        echo (json_encode($response)) ;
 
-        break;}
+        break;
+    }
     case 'get-user-role':{
         $id=trim($_POST['id']);
         $response=User::getUserRole($id);
-        break;}
+        echo $response ;
+        break;
+    }
     case 'get-all-roles':{
           $response=User::getAllRoles();
+        echo (json_encode($response));
+
+        break;
+    }
+    case 'get-all-lessons': {
+
+        $response=Lesson::getAllLessons();
+        echo (json_encode($response));
+
+        break;
+    }
+    case 'get-all-lessons-of-cours':{
+        $courseId=trim($_POST['course_id']);
+        $response=Lesson::getLessonsOfCours($courseId);
+        echo (json_encode($response));
+        break;
+    }
+    case 'get-all-active-lessons':{
+
+        $response=Lesson::getAllActiveLessons();
+        echo (json_encode($response));
+
+        break;
+    }
+    case 'change-lessons-name':{
+
+        $id=trim($_POST['id']);
+        $newName=trim($_POST['new-name']);
+        $response=Lesson::changeLessonName($id,$newName);
         echo $response;
+
+        break;
+    }
+    case 'change-lessons-status':{
+
+        $id=trim($_POST['id']);
+        $newStatus=trim($_POST['new-status']);
+        $response=Lesson::changeLessonStatus($id,$newStatus);
+        echo $response;
+
         break;}
-    case 'get-all-lessons':{break;}
-    case 'get-all-lessons-of-cours':{break;}
-    case 'get-all-active-lessons':{break;}
-    case 'change-lessons-name':{break;}
-    case 'change-lessons-status':{break;}
-    case 'change-lessons-code':{break;}
-    case 'change-lessons-description':{break;}
-    case 'delete-lesson':{break;}
-    case 'add-new-lesson':{break;}
-    case 'change-lessons-cours':{break;}
-    case 'get-all-messages':{break;}
-    case 'delete-messages':{break;}
-    case 'mark-as-unread-messages':{break;}
-    case 'send-message':{break;}
-    case 'get-responded-messages':{break;}
-    case 'get-unresponded-messages':{break;}
-    case 'open-message':{break;}
-    case 'mark-as-read-message':{break;}
+    case 'change-lessons-code':{
+        $id=trim($_POST['id']);
+        $newCode=trim($_POST['new-code']);
+        $response=Lesson::changeLessonCode($id,$newCode);
+        echo $response;
+
+        break;
+    }
+    case 'change-lessons-description':{
+
+        $id=trim($_POST['id']);
+        $newDesc=trim($_POST['new_description']);
+        $response=Lesson::changeLessonDescription($id,$newDesc);
+
+        echo $response;
+
+        break;}
+
+    case 'delete-lesson':{
+
+        $id=trim($_POST['id']);
+        $response=Lesson::deleteLesson($id);
+
+        echo $response;
+
+        break;}
+
+    case 'add-new-lesson':{
+
+        $courseId=trim($_POST['course_id']);
+        $lessonName=trim($_POST['lesson_name']);
+        $lessonDesc=trim($_POST['lesson_description']);
+        $lessonCode=trim($_POST['lesson_code']);
+        $lessonStatus=trim($_POST['lesson_status']);
+        $response=Lesson::addNewLesson($courseId, $lessonName, $lessonDesc,$lessonCode,$lessonName);
+
+        echo $response;
+
+        break;
+    }
+
+    case 'change-lessons-cours':{
+
+        $id=trim($_POST['id']);
+        $courseId=trim($_POST['course_id']);
+        $response=Lesson::changeLessonCours($id,$courseId);
+
+        echo $response;
+
+        break;
+    }
+
+    case 'get-all-messages':{
+
+        $response=Messages::listAllMessages();
+        echo (json_encode($response));
+
+        break;
+    }
+
+    case 'delete-messages':{
+
+        $ids=trim($_POST['id_array']);
+        $response=Messages::deleteAllMessages($ids);
+
+        echo $response;
+        break;
+    }
+
+    case 'mark-as-unread-messages':{
+
+        $ids=trim($_POST['id_array']);
+        $response=Messages::markAllUnread($ids);
+        echo $response;
+
+        break;
+    }
+    case 'send-message':{
+        //todo send message
+
+        break;
+    }
+    case 'get-responded-messages': {
+
+        $response=Messages::respondedMessages();
+        echo (json_encode($response));
+
+        break;
+    }
+    case 'get-unresponded-messages':{
+//        $response=Messages::respo
+       //todo fix this shit
+        break;
+    }
+    case 'open-message':{
+
+        $id=trim($_POST['id']);
+        $response=Messages::readMessage($id);
+        //fixme fix this function
+        echo $response;
+
+        break;}
+    case 'mark-as-read-message':{
+
+        $ids=trim($_POST['id_array']);
+        $response=Messages::markAllRead($ids);
+        
+        echo $response;
+
+        break;
+    }
 //    case '':{break;}
 //    case '':{break;}
 //    case '':{break;}

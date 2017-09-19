@@ -205,6 +205,16 @@ class User
 
     public static function getAllRoles(){
         $qry="SELECT * FROM role WHERE 1";
+        $results=Connection::queryRequest($qry);
+
+        $response=array();
+
+        if(Connection::emptyQueryResults($results)){
+            while($row=$results->fetch_assoc()){
+                $response[]=$row;
+            }
+        }
+        return $response;
     }
 
     public static function getUserRole($id){
