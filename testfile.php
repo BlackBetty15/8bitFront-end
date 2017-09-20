@@ -3,6 +3,7 @@
 require_once 'Connection.php';
 require_once 'Cours.php';
 require_once 'User.php';
+require_once 'Messages.php';
 
 if (!isset($_GET['action'])){
     header("HTTP/1.1 403 Žao nam je, nemate pristup ovoj stranici... ");
@@ -14,7 +15,6 @@ $action = trim($_GET['action']);
 
 switch($action){
 
-    //todo try this but instead of returning an array return data, it's easier to check if it's not valid
     case 'get-courses':{
         $courses=Cours::getAllCourses();
         echo (json_encode( $courses));
@@ -276,15 +276,14 @@ switch($action){
         break;
     }
     case 'get-unresponded-messages':{
-//        $response=Messages::respo
+        $response=Messages::getUnrespondedMessages();
        //todo fix this shit
         break;
     }
     case 'open-message':{
 
         $id=trim($_POST['id']);
-        $response=Messages::readMessage($id);
-        //fixme fix this function
+        $response=Messages::openMessage($id);
         echo $response;
 
         break;}
@@ -292,7 +291,7 @@ switch($action){
 
         $ids=trim($_POST['id_array']);
         $response=Messages::markAllRead($ids);
-        
+
         echo $response;
 
         break;

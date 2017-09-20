@@ -1,3 +1,8 @@
+<?php
+
+
+
+?>
 <div class="row" id="editPanel" xmlns="http://www.w3.org/1999/html">
     <ul class="nav nav-tabs">
         <li class="active cardMenu" data-panel="accountSettings" onclick="switchCards(this)">
@@ -7,13 +12,18 @@
                 kursevima
             </p>
         </li>
-        <li class="cardMenu" href="#" data-panel="manageUsers" onclick="switchCards(this)">
+        <?php
+        if(isset($_SESSION['rola']) && $_SESSION['rola']==1){
+        echo '
+            <li class="cardMenu" href="#" data-panel="manageUsers" onclick="switchCards(this)">
             <p class="navText">
                 Upravljanje
                 <br>
                 korisnicima
             </p>
-        </li>
+        </li>';
+        }
+        ?>
         <li class="cardMenu" href="#" data-panel="manageAccounts" onclick="switchCards(this)">
             <p class="navText">
                 Upravljanje
@@ -28,8 +38,10 @@
                 profil
             </p>
         </li>
+        <?php
 
-        <li class="cardMenu" href="#" data-panel="inbox" onclick="switchCards(this)">
+        if(isset($_SESSION['role'])&& $_SESSION['role']==1){
+        echo '<li class="cardMenu" href="#" data-panel="inbox" onclick="switchCards(this)">
 
             <p class="navText">
                 Pristigle <span style="-webkit-border-radius:50% ;-moz-border-radius:50% ;border-radius: 50%; height: 30px;
@@ -38,7 +50,9 @@
                 <br>
                 poruke
             </p>
-        </li>
+        </li> ';
+        }
+?>
 
     </ul>
 </div>
@@ -180,9 +194,10 @@
                 Ime:
             </div>
             <div class="col-md-2" id="superuserFN"></div>
-            <div class="col-md-1"></div>
+            <div class="col-md-1"> <?php if(isset($_SESSION['ime'])){echo $_SESSION['ime'];} ?></div>
             <div class="col-md-2 inlineLabel">Prezime:</div>
-            <div class="col-md-2" id="superuserLN"></div>
+            <div class="col-md-2" id="superuserLN"><?php if(isset($_SESSION['prezime'])){echo $_SESSION['prezime'];}
+                ?></div>
         </div>
 
         <div class="row">
@@ -190,9 +205,10 @@
                 Email:
             </div>
             <div class="col-md-2" id="superuserMail"></div>
-            <div class="col-md-1"></div>
+            <div class="col-md-1"><?if(isset($_SESSION['email'])){echo $_SESSION['email'];} ?></div>
             <div class="col-md-2 inlineLabel">Status:</div>
-            <div class="col-md-2" id="superuserStatus"></div>
+            <div class="col-md-2" id="superuserStatus"><?php if(isset($_SESSION['status'])){echo 'aktivan';}
+                ?></div>
         </div>
         <br>
         <br>
@@ -258,7 +274,7 @@
             <div class="col-md-3"></div>
             <div class="col-md-4">
                 <div class="errorLog" id="superuserPasswordError"></div>
-                <input type="submit" value="Change password" class="submitBtn">
+                <input type="submit" value="Promeni lozinku" class="submitBtn">
 
             </div>
         </div>
@@ -313,3 +329,4 @@
         </div>
     </div>
 </div>
+<?php ?>

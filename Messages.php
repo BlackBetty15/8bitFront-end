@@ -100,6 +100,32 @@ class Messages
             return false;
         }
     }
+    public static function getUnrespondedMessages(){
+
+        $qry="SELECT * FROM posta WHERE odgovorena=0";
+        $results=Connection::queryRequest($qry);
+        $response=array();
+
+        if(Connection::emptyQueryResults($qry)){
+            while($row=$results->fetch_assoc()){
+                $response[]=$row;
+            }
+        }
+        return $response;
+    }
+    public static function openMessage($id){
+
+        $qry="SELECT * FROM posta WHERE id=$id";
+        $result=Connection::queryRequest($qry);
+        $response=array();
+        if(Connection::emptyQueryResults($result)){
+            while($row=$result->fetch_assoc()){
+                $response[]=$row;
+            }
+        }
+
+        return $response;
+    }
 
 
 

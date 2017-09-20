@@ -13,14 +13,14 @@ if (!empty($_POST['usr'])&& !empty($_POST['psd'])){
 
     if (is_array($vrednost)){
 
-        //todo set this things accordingly to fields
-//        $_SESSION['idKorisnik']=$vrednost['id'];
-//        $_SESSION['tip']=$vrednost['tip'];
-//        $_SESSION['korisnik']=$vrednost['username'];
-//        $_SESSION['lozinka']=$vrednost['pass'];
-//        $_SESSION['aktivan']=$vrednost['aktivan'];
-//        $_SESSION['ime']=$vrednost['ime'];
-//        $_SESSION['prezime']=$vrednost['prezime'];
+
+        $_SESSION['idKorisnik']=$vrednost['id'];
+        $_SESSION['rola']=$vrednost['role'];
+        $_SESSION['korisnik']=$vrednost['korisnicko_ime'];
+        $_SESSION['status']=$vrednost['status'];
+        $_SESSION['ime']=$vrednost['ime'];
+        $_SESSION['prezime']=$vrednost['prezime'];
+        $_SESSION['email']=$vrednost['email'];
 
         Connection::redirectUser($page='adiminpanel.php');
         exit();

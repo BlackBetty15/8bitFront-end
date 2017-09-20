@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(isset($_SESSION['ime'])&& isset($_SESSION['prezime'])){
+    $ime=$_SESSION['ime'];
+    $prezime=$_SESSION['prezime'];
+    $korisnik=$ime.' '.$prezime;
+}
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -29,7 +38,8 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li class="spanLi">
-                    <span class="userSpan"><?php echo $user='user1'?> </span>
+                    <span class="userSpan"><?php if(isset($korisnik)){echo $korisnik;}?>
+                    </span>
                 </li>
                 <li class="spanLi">
                     <span class="glyphicon glyphicon-off" id="logoutSpan"></span>
