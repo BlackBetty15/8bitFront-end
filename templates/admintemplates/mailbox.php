@@ -2,19 +2,19 @@
     <div class="col-md-1"></div>
     <div class="col-md-10 col-sm-10">
         <table class="table table-responsive">
-            <tr>
-                <th>
+            <thead>
+                <td>
                     <select>
                         <option disabled selected>Izaberi opciju</option>
                         <option>Obriši</option>
                         <option>Označi kao pročitano</option>
                     </select>
-                </th>
-                <th>Pristigle</th>
-                <th>Poslate</th>
-                <th>U pripremi</th>
+                </td>
+                <td>Pristigle</td>
+                <td>Poslate</td>
+                <td>U pripremi</td>
 
-            </tr>
+            </thead>
         </table>
     </div>
 </div>
@@ -24,245 +24,245 @@
 
         <div class="row" id="mailContent">
             <table class="table table-responsive">
-                <tr id="tableHeader">
-                    <th class="messageHeader"><input type="checkbox" name="allSelect" id="allSelect"></th>
-                    <th class="messageHeader">Pošiljalac:</th>
-                    <th class="messageHeader">Naslov</th>
-                    <th class="messageHeader">Poruka</th>
-                    <th class="messageHeader">Više</th>
-                </tr>
+                <thead id="tableHeader">
+                    <td class="messageHeader"><input type="checkbox" name="allSelect" id="allSelect"></td>
+                    <td class="messageHeader">Pošiljalac:</td>
+                    <td class="messageHeader">Naslov</td>
+                    <td class="messageHeader">Poruka</td>
+                    <td class="messageHeader">Više</td>
+                </thead>
                 <tbody id="tableBodyInbox">
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Petar Petrović</td>
-                    <td>Responsive dizajn</td>
-                    <td>alalllalalalalalallalallalalal</td>
-                    <td><span class="glyphicon glyphicon-plus"></span></td>
-                </tr>
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><input type="checkbox"></td>-->
+<!--                    <td>Petar Petrović</td>-->
+<!--                    <td>Responsive dizajn</td>-->
+<!--                    <td>alalllalalalalalallalallalalal</td>-->
+<!--                    <td><span class="glyphicon glyphicon-plus"></span></td>-->
+<!--                </tr>-->
                 </tbody>
             </table>
         </div>

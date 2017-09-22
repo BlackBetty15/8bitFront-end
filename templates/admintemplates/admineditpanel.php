@@ -13,7 +13,7 @@
             </p>
         </li>
         <?php
-        if(isset($_SESSION['rola']) && $_SESSION['rola']==1){
+//        if(isset($_SESSION['rola']) && $_SESSION['rola']==1){
         echo '
             <li class="cardMenu" href="#" data-panel="manageUsers" onclick="switchCards(this)">
             <p class="navText">
@@ -22,7 +22,7 @@
                 korisnicima
             </p>
         </li>';
-        }
+//        }
         ?>
         <li class="cardMenu" href="#" data-panel="manageAccounts" onclick="switchCards(this)">
             <p class="navText">
@@ -40,7 +40,7 @@
         </li>
         <?php
 
-        if(isset($_SESSION['role'])&& $_SESSION['role']==1){
+//        if(isset($_SESSION['role'])&& $_SESSION['role']==1){
         echo '<li class="cardMenu" href="#" data-panel="inbox" onclick="switchCards(this)">
 
             <p class="navText">
@@ -51,7 +51,7 @@
                 poruke
             </p>
         </li> ';
-        }
+//        }
 ?>
 
     </ul>
@@ -64,13 +64,13 @@
         <legend>Kursevi:</legend>
 
         <table class="table table-responsive">
-            <tr>
-                <th class="peopleTableHead">Ime kursa</th>
-                <th class="peopleTableHead">Opis</th>
-                <th class="peopleTableHead">Status</th>
-                <th class="peopleTableHead">Obriši</th>
-                <th class="peopleTableHead">Sačuvaj</th>
-            </tr>
+            <thead>
+                <td class="peopleTableHead">Ime kursa</td>
+                <td class="peopleTableHead">Opis</td>
+                <td class="peopleTableHead">Status</td>
+                <td class="peopleTableHead">Obriši</td>
+                <td class="peopleTableHead">Sačuvaj</td>
+            </thead>
             <tbody id="allCourses" class="tableBodyEditPanel">
 
             </tbody>
@@ -132,15 +132,15 @@
         <legend>Korisnici:</legend>
         <table class="table table-responsive">
 
-            <tr>
-                <th class="peopleTableHead">Ime</th>
-                <th class="peopleTableHead">Prezime</th>
-                <th class="peopleTableHead">Email</th>
-                <th class="peopleTableHead">Status</th>
-                <th class="peopleTableHead">Uloga</th>
-                <th class="peopleTableHead">Obriši</th>
-                <th class="peopleTableHead">Sačuvaj</th>
-            </tr>
+            <thead>
+                <td class="peopleTableHead">Ime</td>
+                <td class="peopleTableHead">Prezime</td>
+                <td class="peopleTableHead">Email</td>
+                <td class="peopleTableHead">Status</td>
+                <td class="peopleTableHead">Uloga</td>
+                <td class="peopleTableHead">Obriši</td>
+                <td class="peopleTableHead">Sačuvaj</td>
+            </thead>
             <tbody id="allUsers" class="tableBodyEditPanel">
 
             </tbody>
@@ -162,13 +162,15 @@
     <div class="formCommon noShadow">
         <legend>Lekcije:</legend>
         <table class="table table-responsive">
-            <tr>
-                <th class="peopleTableHead">Naziv lekcije</th>
-                <th class="peopleTableHead">Naziv kursa</th>
-                <th class="peopleTableHead">Obriši</th>
-                <th class="peopleTableHead">Detalji</th>
-            </tr>
+            <thead>
+                <td class="peopleTableHead">Naziv lekcije</td>
+                <td class="peopleTableHead">Naziv kursa</td>
+                <td class="peopleTableHead">Obriši</td>
+                <td class="peopleTableHead">Detalji</td>
+            </thead>
+            <tbody id="lessonData" class="tableBodyEditPanel">
 
+            </tbody>
 
 
         </table>

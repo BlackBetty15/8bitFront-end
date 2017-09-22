@@ -42,8 +42,8 @@ if(isset($_SESSION['ime'])&& isset($_SESSION['prezime'])){
                     </span>
                 </li>
                 <li class="spanLi">
-                    <span class="glyphicon glyphicon-off" id="logoutSpan"></span>
-                    <span id="logoutText">Log out</span>
+                <a href="logout.php"><span class="glyphicon glyphicon-off" id="logoutSpan"></span></a>
+                    <a href="logout.php" id="logoutText">Log out</a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->

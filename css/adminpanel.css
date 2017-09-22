@@ -141,6 +141,7 @@ input {
 .spanLi .glyphicon{
     padding-bottom: 0.3125rem;
     font-size:1.2rem;
+    color: #efe1f9;
 }
 .spanLi .userSpan{
     font-size:1rem;
@@ -672,6 +673,10 @@ legend{
     font-weight: bold;
     text-align: center;
     text-shadow: 0.0625rem 0.0625rem black;
+}
+.nav>li>a {
+    padding:0;
+    
 }
 /*!*Filter form*!*/
 

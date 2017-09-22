@@ -1,11 +1,6 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: milic
- * Date: 17.9.2017.
- * Time: 14:47
- */
+
 class Messages
 {
     private $messageId;

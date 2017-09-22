@@ -306,4 +306,100 @@ function switchCards(e) {
 
 
 
+function fillWithLessons(data){
 
+    var masterParent=document.getElementById('lessonData');
+    console.log('enter function');
+    if(isEmpty(data)){
+
+        var row = document.createElement('tr');
+        row.className = 'userTableContent';
+        var col = document.createElement('td');
+        col.className = 'contentField';
+        col.innerText = "Ne postoji nijedna lekcija.";
+        col.colSpan = "5";
+        row.appendChild(col);
+        masterParent.appendChild(row);
+    }
+    else{
+
+
+
+
+    }
+
+
+}
+
+function fillWithUsers(data){
+
+    var masterParent=document.getElementById('allUsers');
+    console.log('enter function');
+    if(isEmpty(data)){
+
+        var row = document.createElement('tr');
+        row.className = 'userTableContent';
+        var col = document.createElement('td');
+        col.className = 'contentField';
+        col.innerText = "Ne postoji nijedan korisnik.";
+        col.colSpan = "7";
+        row.appendChild(col);
+        masterParent.appendChild(row);
+    }
+    else{}
+
+
+}
+function fillWithCurses(data){
+    var masterParent=document.getElementById('allCourses');
+    console.log('enter function');
+    if(isEmpty(data)){
+
+        var row = document.createElement('tr');
+        row.className = 'userTableContent';
+        var col = document.createElement('td');
+        col.className = 'contentField';
+        col.innerText = "Ne postoji nijedan kurs.";
+        col.colSpan = "5";
+        row.appendChild(col);
+        masterParent.appendChild(row);
+    }
+    else{}
+}
+function fillWithMessages(data){
+    var masterParent=document.getElementById('tableBodyInbox');
+    console.log('enter function');
+    if(isEmpty(data)){
+
+        var row = document.createElement('tr');
+        row.className = 'userTableContent';
+        var col = document.createElement('td');
+        col.className = 'contentField';
+        col.innerText = "Nemate poruka.";
+        col.colSpan = "5";
+        row.appendChild(col);
+        masterParent.appendChild(row);
+    }
+    else{}
+
+}
+var data={};
+
+function isEmpty(obj) {
+    try {
+        if (!obj || obj == null || obj.toString().trim() == '' || obj == undefined || typeof obj === 'undefined' || obj.length == 0 || !obj.length) {
+
+            var empty = true, fld;
+            for (fld in obj) {
+                empty = false;
+                break;
+            }
+            return empty;
+        }
+        return false;
+    } catch (e) {
+        // console.log(e.message);
+    }
+
+}
+$('document').ready(fillWithLessons(data), fillWithCurses(data),fillWithMessages(data),fillWithUsers(data));
