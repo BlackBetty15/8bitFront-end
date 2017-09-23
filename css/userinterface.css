@@ -22,6 +22,12 @@
     font-stretch: normal;
     unicode-range: U+0020-2265;
 }
+html{
+    font-size:15px;
+}
+body{
+    font-size:1rem;
+}
 html,body{
     position: relative;
     padding:0;
@@ -29,7 +35,6 @@ html,body{
     height: 100%;
     background-color: #b9d151;
     font-family: WebpixelRegular, monospace;
-    font-size: 15px;
 }
 *:not(textarea), *:not(input){
     cursor: default;
@@ -191,7 +196,31 @@ header{
     text-align: justify;
     text-indent:35px;
 }
-.signature{
-    font-size:30px;
+#signature{
+    font-size:2rem;
     font-style: italic;
+}
+.jumbotron {
+    background-color: transparent;
+    color: #9a3b39;
+    font-weight: bold;
+}
+.jumbotron p{
+    font-weight: bolder;
+}
+.jumbotron hr{
+    border-color: #297045;
+}
+.navbar-default .navbar-nav>li>a{
+    color: #b9d151;
+    font-size: 1.2rem;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #f2f2f2;
+    background-color: #1f5434;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: whitesmoke;
+    background-color: transparent;
 }

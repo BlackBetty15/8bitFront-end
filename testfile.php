@@ -170,7 +170,6 @@ switch($action){
         $newCode=trim($_POST['new_code']);
         $newDesc=trim($_POST['new_description']);
         $courseId=trim($_POST['new_course_id']);
-//        echo($lessonId.$newName.$newStatus.$newCode.$newDesc.$courseId);
         $response=Lesson::lessonModification($lessonId,$courseId,$newName,$newDesc,$newCode,$newStatus);
         echo $response;
         break;
