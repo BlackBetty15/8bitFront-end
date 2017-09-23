@@ -35,10 +35,10 @@ if(isset($_SESSION['ime'])&& isset($_SESSION['prezime'])){
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
+            <?php if(isset($korisnik)){  ?>
             <ul class="nav navbar-nav navbar-right">
-                <li class="spanLi">
-                    <span class="userSpan"><?php if(isset($korisnik)){echo $korisnik;}?>
+                <li class="spanLi" data-panel="superuserSettings" onclick="switchCards(this)">
+                    <span class="userSpan"><?php echo $korisnik;?>
                     </span>
                 </li>
                 <li class="spanLi">
@@ -46,6 +46,7 @@ if(isset($_SESSION['ime'])&& isset($_SESSION['prezime'])){
                     <a href="logout.php" id="logoutText">Log out</a>
                 </li>
             </ul>
+            <?php } ?>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>

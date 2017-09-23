@@ -1,6 +1,10 @@
 <?php
 
-
+if(!isset($_SESSION['idKorisnik']) || !isset($_SESSION['role']) || !isset($_SESSION['korisnik']) ||
+   !isset($_SESSION['status'])){
+    header("Location: errorPage.php" );
+    die();
+}
 
 ?>
 <div class="row" id="editPanel" xmlns="http://www.w3.org/1999/html">
@@ -13,7 +17,7 @@
             </p>
         </li>
         <?php
-//        if(isset($_SESSION['rola']) && $_SESSION['rola']==1){
+        if(isset($_SESSION['role']) && $_SESSION['role']==1){
         echo '
             <li class="cardMenu" href="#" data-panel="manageUsers" onclick="switchCards(this)">
             <p class="navText">
@@ -22,7 +26,7 @@
                 korisnicima
             </p>
         </li>';
-//        }
+        }
         ?>
         <li class="cardMenu" href="#" data-panel="manageAccounts" onclick="switchCards(this)">
             <p class="navText">
@@ -40,7 +44,7 @@
         </li>
         <?php
 
-//        if(isset($_SESSION['role'])&& $_SESSION['role']==1){
+        if(isset($_SESSION['role'])&& $_SESSION['role']==1){
         echo '<li class="cardMenu" href="#" data-panel="inbox" onclick="switchCards(this)">
 
             <p class="navText">
@@ -51,7 +55,7 @@
                 poruke
             </p>
         </li> ';
-//        }
+        }
 ?>
 
     </ul>
@@ -90,15 +94,15 @@
             <div class="row">
                 <br>
                 <div class="col-md-2 inlineLabel">Naziv kursa:</div>
-                <div class="col-md-6"><input type="text" id="coursName"></div>
+                <div class="col-md-6"><input type="text" id="coursName" name="cours_name"></div>
                 <div class="col-md-1 inlineLabel">Aktiviraj:</div>
                 <div class="col-md-1">
                     <label>Da</label>
-                    <input type="radio" name="coursRadio" checked>
+                    <input type="radio" name="coursRadio"  value="1" checked>
                 </div>
                 <div class="col-md-1">
                     <label>Ne</label>
-                    <input type="radio" name="coursRadio">
+                    <input type="radio" name="coursRadio" value="0">
                 </div>
             </div>
             <br>
@@ -106,10 +110,10 @@
             <div class="row">
                 <div class="col-md-2 inlineLabel">Opis kursa:</div>
                 <div class="col-md-6">
-                    <textarea id="coursDescription" rows="7" cols="61"></textarea>
+                    <textarea id="coursDescription" rows="7" cols="53" name="cours_description"></textarea>
                 </div>
-                <div class="col-md-3">
-                    <button class="btn-success">Sačuvaj</button>
+                <div class="col-md-2">
+                    <button class="btn-success" id="saveNewCours">Sačuvaj</button>
                 </div>
             </div>
             <br>
@@ -178,7 +182,8 @@
     </div>
     <div class="row">
         <div class="col-md-3">
-            <span class="glyphicon glyphicon-plus" data-target="#lessonModal" data-toggle="modal"></span>
+            <span class="glyphicon glyphicon-plus" data-target="#lessonModal" data-toggle="modal"
+                  onclick="clearFields()"></span>
             Dodaj novu lekciju
         </div>
 
@@ -188,18 +193,19 @@
 
 
 <div class="container-fluid card" id="superuserSettings">
-    <form class="formCommon noShadow" method="post" action="#" name="formSuperuserSettings"
+    <form class="formCommon noShadow" method="post" name="formSuperuserSettings"
           onsubmit="return checkPasswordEdit()">
         <legend>Moj profil:</legend>
         <div class="row">
             <div class="col-md-2 inlineLabel">
                 Ime:
             </div>
-            <div class="col-md-2" id="superuserFN"></div>
-            <div class="col-md-1"> <?php if(isset($_SESSION['ime'])){echo $_SESSION['ime'];} ?></div>
+            <div class="col-md-2" id="superuserFN">
+
+            </div>
+            <div class="col-md-1"></div>
             <div class="col-md-2 inlineLabel">Prezime:</div>
-            <div class="col-md-2" id="superuserLN"><?php if(isset($_SESSION['prezime'])){echo $_SESSION['prezime'];}
-                ?></div>
+            <div class="col-md-2" id="superuserLN"></div>
         </div>
 
         <div class="row">
@@ -207,10 +213,9 @@
                 Email:
             </div>
             <div class="col-md-2" id="superuserMail"></div>
-            <div class="col-md-1"><?if(isset($_SESSION['email'])){echo $_SESSION['email'];} ?></div>
+            <div class="col-md-1"></div>
             <div class="col-md-2 inlineLabel">Status:</div>
-            <div class="col-md-2" id="superuserStatus"><?php if(isset($_SESSION['status'])){echo 'aktivan';}
-                ?></div>
+            <div class="col-md-2" id="superuserStatus"></div>
         </div>
         <br>
         <br>
@@ -276,7 +281,7 @@
             <div class="col-md-3"></div>
             <div class="col-md-4">
                 <div class="errorLog" id="superuserPasswordError"></div>
-                <input type="submit" value="Promeni lozinku" class="submitBtn">
+                <input type="submit" value="Promeni lozinku" class="submitBtn" id="changePassword">
 
             </div>
         </div>
@@ -331,4 +336,3 @@
         </div>
     </div>
 </div>
-<?php ?>

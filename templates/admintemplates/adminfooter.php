@@ -6,5 +6,6 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/capsLock.js"></script>
 <script src="js/methods.js"></script>
+<script src="ajaxcall.js"></script>
 
 </html>

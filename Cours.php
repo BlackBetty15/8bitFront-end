@@ -61,7 +61,7 @@ class Cours
 
 
 
-        $qry="INSERT INTO kursevi(naziv, opis, status) VALUES ('".$name."','".$description."', 1)";
+        $qry="INSERT INTO kursevi(naziv, opis, status) VALUES ('".$name."','".$description."', $status)";
         $responseStatus=Connection::queryRequest($qry);
 
         if($responseStatus){

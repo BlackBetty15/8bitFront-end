@@ -41,12 +41,12 @@
             <label for="rolesSelect">Uloga:</label>
             <!--todo ajax request response data fill -->
             <select class="formField important" name="roles" id="rolesSelect">
-                <option>Admin</option>
-                <option selected>Moderator</option>
+                <option value="1">Admin</option>
+                <option value="2" selected>Moderator</option>
 
             </select>
             <div class="errorLog"></div>
-            <input type="submit" class="submitBtn" id="addUserSubmit">
+            <input type="submit" class="submitBtn" id="addUserSubmit" value="Dodaj krosinika">
         </form>
 
     </div>

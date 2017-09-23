@@ -54,4 +54,18 @@ class Connection
     {
         @mysqli_close($this->con) OR die('Disconnect problem');
     }
+
+    public static function redirectUser($page){
+
+        $url='http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']);
+        /*Dodeljuje se ime hosta(domaćina) a zatim postavlja u tekući direktorijum, a to je direktorijum iz kog se poziva funkcija*/
+
+        $url=trim($url,'/\\'); /*uklanja kose crtne na kraju*/
+
+        $url.='/'.$page; /*dodaje ime stranice na koju preusmeravamo*/
+
+        header('Location:'.$url);/*Preusmeravanje*/
+        exit(); /*Prekida izvršavanje skripta*/
+
+    }
 }

@@ -52,7 +52,8 @@ class User
         $result=Connection::queryRequest($qry);
 
         if(Connection::emptyQueryResults($result)){
-            return $result;
+            $response=$result->fetch_assoc();
+            return $response;
         }
         else{
             return 'Traženi korisnik ne postoji';
@@ -115,8 +116,9 @@ class User
         $qry="SELECT pwd_hash FROM korisnici WHERE id=$id";
         $result=Connection::queryRequest($qry);
 
-        if(!empty($result)){
-        if(password_verify($password,$result)){
+        if($result){
+            $result=$result->fetch_assoc();
+        if(password_verify($password,$result['pwd_hash'])){
             return 1;
         }
         }else{
@@ -135,7 +137,7 @@ class User
             ];
             $passwordHash=password_hash($newPassword, PASSWORD_BCRYPT,$options);
 
-            $qry="UPDATE korisnici SET pwd_hash=$passwordHash WHERE id=$id";
+            $qry="UPDATE korisnici SET pwd_hash='".$passwordHash."' WHERE id=$id";
 
             $responseStatus=Connection::queryRequest($qry);
             if($responseStatus){
@@ -152,7 +154,7 @@ class User
 
     }
 
-    public static function changeUsersStatus($id,$status){
+    public static function changeUsers($id,$status,$role){
 
         $now='';
         if($status==1){
@@ -162,7 +164,7 @@ class User
             $now='deaktivirali';
         }
 
-        $qry="UPDATE korisnici SET status=$status WHERE id=$id";
+        $qry="UPDATE korisnici SET statuts=$status, role=$role WHERE id=$id";
 
         $responseStatus=Connection::queryRequest($qry);
         if($responseStatus){
@@ -174,18 +176,18 @@ class User
 
     }
 
-    public static function changeUsersRole($id,$role){
-
-        $qry="UPDATE korisnici SET status=$role WHERE id=$id";
-        $responseStatus=Connection::queryRequest($qry);
-
-        if($responseStatus){
-            return 'Uspešno ste promenili ulogu korisnika';
-        }
-        else{
-            return 'Došlo je do greške';
-        }
-    }
+//    public static function changeUsersRole($id,$role){
+//
+//        $qry="UPDATE korisnici SET status=$role WHERE id=$id";
+//        $responseStatus=Connection::queryRequest($qry);
+//
+//        if($responseStatus){
+//            return 'Uspešno ste promenili ulogu korisnika';
+//        }
+//        else{
+//            return 'Došlo je do greške';
+//        }
+//    }
 
     public static function deleteUser($id){
 
@@ -238,22 +240,25 @@ class User
             'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
         ];
 
-            $psd=password_hash($password,PASSWORD_BCRYPT,$options);
 
 
-            $qry="SELECT * FROM korisnici WHERE korisnicko_ime= '".$username."' AND pass= '".$psd."'";
+
+            $qry="SELECT * FROM korisnici WHERE korisnicko_ime='".$username."'";
 
             $results = Connection::queryRequest($qry);
-            $error="Nema đokice"; /* Sredi đokicu*/
+            $error=''; /* Sredi đokicu*/
 
-            $validacija=Connection::emptyQueryResults($results);
-            if($validacija==1){
+            if(Connection::emptyQueryResults($results)){
+                $results=$results->fetch_assoc();
 
-                return $results->fetch_assoc();
+                if(password_verify($password,$results['pwd_hash'])){
+                    return $results;
+                }
+                else{
+                    return $error;
+                }
             }
-            else
-                return $error;
-
+            return $error;
 
         }
 

@@ -1,3 +1,6 @@
+<?php
+    session_start();
+   ?>
 <!doctype html>
 <html lang="sr">
 <head>
@@ -22,22 +25,32 @@
 
                <div class="login">
 
-                    <form method="post" id="loginAdmin" name="adminLoginForm" action="validate.php"
+                    <form method="post" id="loginAdmin" name="adminLoginForm" action="login.php"
                           onsubmit="return checkForm()">
 
                         <div class="inputPair">
                             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                             <input class="inputAdmin important" type="text" id="Username"
-                                   placeholder="Korisničko ime"/>
+                                 name="usr"  placeholder="Korisničko ime"/>
                         </div>
 
                         <div class="bar"></div>
                             <div class="inputPair">
                             <span class="glyphicon glyphicon-lock"></span>
-                            <input class="inputAdmin important" type="password" id="Password"  placeholder="Lozinka"/>
+                            <input class="inputAdmin important" type="password" id="Password" name="psd"
+                                   placeholder="Lozinka"/>
                          </div>
                              <div class="bar"></div>
-                            <div class="errorLog"> </div>
+                            <div class="errorLog">
+                            <?php
+                            if(isset($_SESSION['neaktivan'])){
+                                echo $_SESSION['neaktivan'];
+                            }
+                            if(isset($_SESSION['nePostoji'])){
+                                echo $_SESSION['nePostoji'];
+                            }
+                            ?>
+                            </div>
                         <div class="inputPair">
                             <input type="submit" id="Submit" value="Prijavi se"/>
                         </div>

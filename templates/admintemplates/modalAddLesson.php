@@ -2,8 +2,8 @@
 <button type="button"  style="color:#efe1f9;" class="close" data-dismiss="modal">&times;</button>
 
 
-<form  id="addPerson" class="formCommon noShadow" name="add_person" enctype="multipart/form-data">
-    <h3>Dodaj lekciju</h3>
+<form  id="addLesson" class="formCommon noShadow" name="add_person" enctype="multipart/form-data">
+    <h3 id="modalHeader">Dodaj lekciju</h3>
     <br>
     <div class="form-group">
         <legend>Podaci</legend>
@@ -30,12 +30,12 @@
             <div class="col-md-2">
                 <br>
                 <label>Da</label>
-                <input type="radio" checked name="lessonRadio">
+                <input type="radio" checked name="lessonRadio" value="1">
             </div>
             <div class="col-md-2">
                 <br>
                 <label>Ne</label>
-                <input type="radio"  name="lessonRadio">
+                <input type="radio"  name="lessonRadio" value="0">
             </div>
 
         </div>
@@ -45,10 +45,10 @@
                 <span class="inlineLabel">Kurs:</span>
             </div>
             <div class="col-md-6">
-                <select>
-                    <option>HTML</option>
-                    <option>CSS</option>
-                    <option>JavaScript</option>
+                <select id="coursSelect" name="coursSelect">
+<!--                    <option value="1">HTML</option>-->
+<!--                    <option value="2">CSS</option>-->
+<!--                    <option value="3">JavaScript</option>-->
                 </select>
             </div>
         </div>
@@ -63,7 +63,7 @@
 
             <label class="col-md-2 inlineLabel">Opis:</label><br>
             <div class="col-md-7">
-                <textarea id="lessonDescription" rows="7" cols="61"></textarea>
+                <textarea name="lessonDescription" id="lessonDescription" rows="7" cols="53"></textarea>
             </div>
 
         </div>
@@ -71,11 +71,13 @@
         <div class="row">
             <label class="col-md-2 inlineLabel">Primer koda:</label><br>
             <div class="col-md-7">
-                <textarea id="lessonDemonstration" rows="7" cols="61"></textarea>
+                <textarea name="lessonCode" id="lessonDemonstration" rows="7" cols="53"></textarea>
             </div>
         </div>
 
     </div>
     <div class="errorLog"></div><br>
-    <input type="submit" class="submitBtn" id="btnAddPeopleSubmit" value="Sačuvaj lekciju">
+    <div id="buttonContainer">
+    <input type="submit" class="submitBtn" id="btnAddLessonSubmit" value="Sačuvaj lekciju">
+    </div>
 </form>

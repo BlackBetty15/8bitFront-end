@@ -1,10 +1,11 @@
 <?php
-
+session_start();
 require_once 'Connection.php';
 require_once 'Cours.php';
 require_once 'User.php';
+require_once 'Lesson.php';
 require_once 'Messages.php';
-
+require_once 'ResponseMessages.php';
 if (!isset($_GET['action'])){
     header("HTTP/1.1 403 Žao nam je, nemate pristup ovoj stranici... ");
 }
@@ -29,7 +30,7 @@ switch($action){
 
         $name=trim($_POST['name']);
         $description=trim($_POST['description']);
-        $status=1;
+        $status=trim($_POST['status']);
 
         $response=Cours::makeNewCours($name,$description,$status);
         echo $response;
@@ -82,7 +83,7 @@ switch($action){
     }
     case 'change-user-first-name':{
         $firstName=trim($_POST['first_name']);
-        $id=trim($_POST['id']);
+        $id=trim($_SESSION['idKorisnik']);
 
         $response=User::changeFirstName($id,$firstName);
         echo $response;
@@ -91,32 +92,24 @@ switch($action){
     }
     case 'change-user-last-name':{
         $lastName=trim($_POST['last_name']);
-        $id=trim($_POST['id']);
+        $id=trim($_SESSION['idKorisnik']);
 
         $response=User::changeLastName($id,$lastName);
         echo $response;
 
         break;}
-    case 'change-user-status':{
+    case 'change-user':{
         $id=trim($_POST['id']);
         $status=trim($_POST['status']);
-
-        $response=User::changeUsersStatus($id,$status);
-        echo $response;
-        break;}
-
-    case 'change-user-role':{
-        $id=trim($_POST['id']);
         $role=trim($_POST['role']);
-
-        $response=User::changeUsersRole($id,$role);
+        $response=User::changeUsers($id,$status,$role);
         echo $response;
-
         break;}
+
     case 'change-user-password':{
         $old=trim($_POST['old_password']);
         $new=trim($_POST['new_password']);
-        $id=trim($_POST['id']);
+        $id=trim($_SESSION['idKorisnik']);
 
         $response=User::changePassword($id,$old,$new);
         echo $response;
@@ -131,7 +124,7 @@ switch($action){
 
     case 'get-specific-user':{
 
-        $id=trim($_POST['id']);
+        $id=trim($_SESSION['idKorisnik']);
         $response=User::getSpecificUser($id);
         echo (json_encode($response)) ;
 
@@ -169,40 +162,26 @@ switch($action){
 
         break;
     }
-    case 'change-lessons-name':{
+    case 'modify-lesson':{
 
-        $id=trim($_POST['id']);
-        $newName=trim($_POST['new-name']);
-        $response=Lesson::changeLessonName($id,$newName);
-        echo $response;
-
-        break;
-    }
-    case 'change-lessons-status':{
-
-        $id=trim($_POST['id']);
-        $newStatus=trim($_POST['new-status']);
-        $response=Lesson::changeLessonStatus($id,$newStatus);
-        echo $response;
-
-        break;}
-    case 'change-lessons-code':{
-        $id=trim($_POST['id']);
-        $newCode=trim($_POST['new-code']);
-        $response=Lesson::changeLessonCode($id,$newCode);
-        echo $response;
-
-        break;
-    }
-    case 'change-lessons-description':{
-
-        $id=trim($_POST['id']);
+        $lessonId=trim($_POST['id']);
+        $newName=trim($_POST['new_name']);
+        $newStatus=trim($_POST['new_status']);
+        $newCode=trim($_POST['new_code']);
         $newDesc=trim($_POST['new_description']);
-        $response=Lesson::changeLessonDescription($id,$newDesc);
-
+        $courseId=trim($_POST['new_course_id']);
+//        echo($lessonId.$newName.$newStatus.$newCode.$newDesc.$courseId);
+        $response=Lesson::lessonModification($lessonId,$courseId,$newName,$newDesc,$newCode,$newStatus);
         echo $response;
+        break;
+    }
+    case 'get-one-lesson':{
+        $lessonId=trim($_POST['id']);
+        $response=Lesson::getOneLesson($lessonId);
+        echo(json_encode($response));
+        break;
+    }
 
-        break;}
 
     case 'delete-lesson':{
 
@@ -220,18 +199,7 @@ switch($action){
         $lessonDesc=trim($_POST['lesson_description']);
         $lessonCode=trim($_POST['lesson_code']);
         $lessonStatus=trim($_POST['lesson_status']);
-        $response=Lesson::addNewLesson($courseId, $lessonName, $lessonDesc,$lessonCode,$lessonName);
-
-        echo $response;
-
-        break;
-    }
-
-    case 'change-lessons-cours':{
-
-        $id=trim($_POST['id']);
-        $courseId=trim($_POST['course_id']);
-        $response=Lesson::changeLessonCours($id,$courseId);
+        $response=Lesson::addNewLesson($courseId, $lessonName, $lessonDesc,$lessonCode,$lessonStatus);
 
         echo $response;
 

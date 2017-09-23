@@ -86,6 +86,20 @@ class Lesson
         }
         return $response;
     }
+    public static function lessonModification($id,$coursId, $lessonName, $lessonDescription, $lessonCode,$lessonStatus){
+
+        $qry="UPDATE lekcije  SET  id_kursa =$coursId,
+              naziv ='".$lessonName."', opis ='".$lessonDescription."', primer_koda ='".$lessonCode."',
+              status=$lessonStatus WHERE id=$id";
+            $result=Connection::queryRequest($qry);
+            if($result){
+                return "Uspešno ste izmenili parametre lekcije";
+            }
+        else{
+                return'Došlo je do greške, pokušajte kasnije';
+        }
+
+    }
 
     public static function deleteLesson($id){
 
