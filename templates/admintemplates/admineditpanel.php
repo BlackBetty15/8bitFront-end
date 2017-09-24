@@ -338,7 +338,16 @@ if(!isset($_SESSION['idKorisnik']) || !isset($_SESSION['role']) || !isset($_SESS
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <?php include_once 'modalAddLesson.php'; ?>
+                <?php include_once 'modalResponse.php'; ?>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="messageModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <?php include_once 'modalMessage.php'; ?>
             </div>
         </div>
     </div>

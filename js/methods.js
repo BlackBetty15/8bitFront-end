@@ -622,6 +622,7 @@ function fillWithCurses(data) {
 }
 function fillWithMessages(data) {
     var masterParent = document.getElementById('tableBodyInbox');
+    masterParent.innerHTML="";
     console.log('enter function');
     if (isEmpty(data)) {
 
@@ -866,9 +867,50 @@ function clearFields(){
     }
     buttonContainer.innerHTML='<input type="submit" class="submitBtn" id="btnAddLessonSubmit" value="Sačuvaj lekciju">';
 }
+function openMessageModal(e){
+    var messageId=[];
+    messageId.push(e.getAttribute('data-id'));
 
+    var data = null;
+    var response = null;
+    response = $.ajax({
+        type: "POST",
+        url: "testfile.php?action=open-message",
+        async: false,
+        data:{id: e.getAttribute('data-id')},
+        success: function (resp) {
+            fillMessageDetail(JSON.parse(resp));
+        }
+    }).responseText;
+    response= $.ajax({
+        type: "POST",
+        url: "testfile.php?action=mark-as-read-message",
+        async: false,
+        data:{id_array: messageId},
+        success:function(resp){
+        }
+    });
+    messages=getAll('get-all-messages');
+        unreadMessages=0;
+        fillWithMessages(messages)
+}
 
+function fillMessageDetail(data){
 
+   var message=document.getElementById('messageDisplay');
+    var subject=document.getElementById('messageSubject');
+    var sender=document.getElementById('senderDisplay');
+    var date=document.getElementById('dateDisplay');
+    var responseButton=document.getElementById('sendResponse');
+    var mail=document.getElementById('mailDisplay');
+
+    message.innerText=data[0].poruka;
+    subject.innerText=data[0].naslov;
+    sender.innerText=data[0].posiljalac_ime+" "+data[0].posiljalac_prezime;
+    mail.innerText=data[0].posiljalac;
+    date.innerText=data[0].datum;
+    responseButton.setAttribute('data-id',data[0].id);
+}
 $('document').ready(
     getRoles(),
     dataUsers = getAll('get-all-users'),

@@ -88,3 +88,21 @@ tr th{
 .readMEssage{
     background-color: #e2dede!important;
 }
+#messageDisplay{
+    height: auto;
+    padding: 3.125rem;
+    border-radius: 0.625rem;
+    background-color: whitesmoke;
+    color:black;
+}
+.btnMessage{
+    background-color: #6b7d3e;
+    color: whitesmoke;
+    width:100%
+}
+#popupResponse{
+    display:none;
+}
+#responde:hover{
+    text-shadow: 0.0625rem 0.0625rem 0.9375rem white;
+}

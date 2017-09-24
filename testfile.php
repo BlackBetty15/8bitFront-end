@@ -231,8 +231,13 @@ switch($action){
         break;
     }
     case 'send-message':{
-        //todo send message
-
+        $to=trim($_POST['to']);
+        $subject=trim($_POST['subject']);
+        $message=trim($_POST['message']);
+        $id=trim($_POST['id']);
+        $writeResult=ResponseMessages::writeMessage($id,$to,0,1,$message);
+        $result=ResponseMessages::sendMessage($to,$subject,$message,$id);
+        echo 'Sve super';
         break;
     }
     case 'get-responded-messages': {
@@ -251,12 +256,12 @@ switch($action){
 
         $id=trim($_POST['id']);
         $response=Messages::openMessage($id);
-        echo $response;
+        echo (json_encode($response));
 
         break;}
     case 'mark-as-read-message':{
-
-        $ids=trim($_POST['id_array']);
+        $ids=array();
+        $ids=($_POST['id_array']);
         $response=Messages::markAllRead($ids);
 
         echo $response;

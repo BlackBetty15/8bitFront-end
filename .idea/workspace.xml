@@ -2,21 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37d82930-8f01-4c53-98f4-f9192b711426" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zavrsni rad.docx" afterPath="$PROJECT_DIR$/zavrsni rad.docx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admintemplates/modalResponse.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modals.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/admintemplates/responseModal.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cours.php" afterPath="$PROJECT_DIR$/Cours.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Messages.php" afterPath="$PROJECT_DIR$/Messages.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about.php" afterPath="$PROJECT_DIR$/about.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajaxcall.js" afterPath="$PROJECT_DIR$/ajaxcall.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/adminpanel.css" afterPath="$PROJECT_DIR$/css/adminpanel.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/mailStyle.css" afterPath="$PROJECT_DIR$/css/mailStyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/userinterface.css" afterPath="$PROJECT_DIR$/css/userinterface.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/methods.js" afterPath="$PROJECT_DIR$/js/methods.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/message.php" afterPath="$PROJECT_DIR$/message.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admintemplates/admineditpanel.php" afterPath="$PROJECT_DIR$/templates/admintemplates/admineditpanel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admintemplates/mailbox.php" afterPath="$PROJECT_DIR$/templates/admintemplates/mailbox.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/usertemplates/userfooter.php" afterPath="$PROJECT_DIR$/templates/usertemplates/userfooter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testfile.php" afterPath="$PROJECT_DIR$/testfile.php" />
     </list>
     <ignored path="diplomski.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,40 +46,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="admineditpanel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/admintemplates/admineditpanel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.927273">
-              <caret line="340" column="50" selection-start-line="340" selection-start-column="36" selection-end-line="340" selection-end-column="50" />
-              <folding>
-                <marker date="1506275833632" expanded="true" signature="713:853" placeholder="..." />
-                <marker date="1506275833632" expanded="true" signature="745:839" placeholder="..." />
-                <marker date="1506275833632" expanded="true" signature="1503:1750" placeholder="..." />
-                <marker date="1506275833632" expanded="true" signature="1536:1736" placeholder="..." />
-                <marker date="1506275833632" expanded="true" signature="1595:1667" placeholder="..." />
-                <marker date="1506275833632" expanded="true" signature="1668:1675" placeholder="..." />
-                <marker date="1506275833632" expanded="true" signature="5113:5140" placeholder="..." />
-                <marker date="1506275833632" expanded="true" signature="6376:6520" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adminpanel.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/adminpanel.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.153846">
-              <caret line="694" column="0" selection-start-line="694" selection-start-column="0" selection-end-line="694" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ajaxcall.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ajaxcall.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.4827585">
-              <caret line="43" column="54" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="54" />
+            <state vertical-scroll-proportion="-3.5172415">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -100,55 +66,75 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mailStyle.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/mailStyle.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5636363">
-              <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Messages.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Messages.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Messages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.6">
-              <caret line="47" column="57" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.11524164">
+              <caret line="128" column="47" selection-start-line="128" selection-start-column="47" selection-end-line="128" selection-end-column="47" />
               <folding>
-                <marker date="1506273495665" expanded="true" signature="981:1203" placeholder="INSERT INTO posta... " />
-                <marker date="1506273495665" expanded="true" signature="1504:1551" placeholder="SELECT * FRO... posta" />
-                <marker date="1506273495665" expanded="true" signature="1894:1932" placeholder="SELECT * FRO... posta" />
-                <marker date="1506273495665" expanded="true" signature="2268:2297" placeholder="SELECT * FRO... posta" />
-                <marker date="1506273495665" expanded="true" signature="2549:2588" placeholder="UPDATE posta... " />
-                <marker date="1506273495665" expanded="true" signature="2823:2861" placeholder="SELECT * FRO... posta" />
-                <marker date="1506273495665" expanded="true" signature="3189:3218" placeholder="SELECT * FRO... posta" />
-                <marker date="1506273495665" expanded="true" signature="3840:3869" placeholder="UPDATE posta... " />
-                <marker date="1506273495665" expanded="true" signature="4401:4420" placeholder="DELETE FROM " />
-                <marker date="1506273495665" expanded="true" signature="4949:4978" placeholder="UPDATE posta... " />
-                <marker date="1506273495665" expanded="true" signature="5219:5256" placeholder="SELECT * FRO... posta" />
-                <marker date="1506273495665" expanded="true" signature="5591:5628" placeholder="SELECT * FRO... posta" />
-                <marker date="1506273495665" expanded="true" signature="5964:6002" placeholder="SELECT * FRO... posta" />
+                <marker date="1506280250563" expanded="true" signature="981:1203" placeholder="INSERT INTO posta... " />
+                <marker date="1506280250563" expanded="true" signature="1504:1551" placeholder="SELECT * FRO... posta" />
+                <marker date="1506280250563" expanded="true" signature="1894:1932" placeholder="SELECT * FRO... posta" />
+                <marker date="1506280250563" expanded="true" signature="2268:2297" placeholder="SELECT * FRO... posta" />
+                <marker date="1506280250563" expanded="true" signature="2549:2588" placeholder="UPDATE posta... " />
+                <marker date="1506280250563" expanded="true" signature="2823:2861" placeholder="SELECT * FRO... posta" />
+                <marker date="1506280250563" expanded="true" signature="3189:3218" placeholder="SELECT * FRO... posta" />
+                <marker date="1506280250563" expanded="true" signature="3547:3576" placeholder="UPDATE posta... " />
+                <marker date="1506280250563" expanded="true" signature="3547:3585" placeholder="UPDATE posta... " />
+                <marker date="1506280250563" expanded="true" signature="4106:4135" placeholder="UPDATE posta... " />
+                <marker date="1506280250563" expanded="true" signature="4667:4686" placeholder="DELETE FROM " />
+                <marker date="1506280250563" expanded="true" signature="5215:5244" placeholder="UPDATE posta... " />
+                <marker date="1506280250563" expanded="true" signature="5485:5522" placeholder="SELECT * FRO... posta" />
+                <marker date="1506280250563" expanded="true" signature="5857:5894" placeholder="SELECT * FRO... posta" />
+                <marker date="1506280250563" expanded="true" signature="6230:6268" placeholder="SELECT * FRO... posta" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="methods.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="methods.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/methods.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6846543">
-              <caret line="680" column="73" selection-start-line="680" selection-start-column="73" selection-end-line="680" selection-end-column="73" />
+            <state vertical-scroll-proportion="-10.655172">
+              <caret line="900" column="55" selection-start-line="900" selection-start-column="41" selection-end-line="900" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="responseModal.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/admintemplates/responseModal.php">
+      <file leaf-file-name="modalMessage.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/admintemplates/modalMessage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.8076925">
+              <caret line="32" column="74" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResponseMessages.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ResponseMessages.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.1636364">
+              <caret line="78" column="27" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="27" />
+              <folding>
+                <marker date="1506023969467" expanded="true" signature="720:753" placeholder="SELECT * FRO... moje_poruke" />
+                <marker date="1506023969467" expanded="true" signature="1103:1144" placeholder="SELECT * FRO... moje_poruke" />
+                <marker date="1506023969467" expanded="true" signature="1494:1536" placeholder="SELECT * FRO... moje_poruke" />
+                <marker date="1506023969467" expanded="true" signature="1939:2110" placeholder="INSERT INTO moje_poruke... " />
+                <marker date="1506023969467" expanded="true" signature="2573:2637" placeholder="UPDATE moje_... " />
+                <marker date="1506023969467" expanded="true" signature="3046:3079" placeholder="DELETE FROM " />
+                <marker date="1506023969467" expanded="true" signature="3313:3377" placeholder="UPDATE moje_... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testfile.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testfile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.181818">
+              <caret line="235" column="37" selection-start-line="235" selection-start-column="37" selection-end-line="235" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -171,8 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/fonts/bulky/BULKYPIX.css" />
-        <option value="$PROJECT_DIR$/fonts/webpixel/light/webpixel bitmap.css" />
         <option value="$PROJECT_DIR$/infopage.html" />
         <option value="$PROJECT_DIR$/about.html" />
         <option value="$PROJECT_DIR$/css/responsive.css" />
@@ -196,7 +180,6 @@
         <option value="$PROJECT_DIR$/User.php" />
         <option value="$PROJECT_DIR$/Lesson.php" />
         <option value="$PROJECT_DIR$/templates/admintemplates/modalAddLesson.php" />
-        <option value="$PROJECT_DIR$/testfile.php" />
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/templates/usertemplates/userheader.php" />
         <option value="$PROJECT_DIR$/js/loader.js" />
@@ -215,13 +198,16 @@
         <option value="$PROJECT_DIR$/captcha/securimage.php" />
         <option value="$PROJECT_DIR$/message.php" />
         <option value="$PROJECT_DIR$/messageValidation.php" />
-        <option value="$PROJECT_DIR$/ajaxcall.js" />
-        <option value="$PROJECT_DIR$/Messages.php" />
         <option value="$PROJECT_DIR$/css/adminpanel.css" />
-        <option value="$PROJECT_DIR$/js/methods.js" />
         <option value="$PROJECT_DIR$/templates/admintemplates/mailbox.php" />
-        <option value="$PROJECT_DIR$/css/mailStyle.css" />
+        <option value="$PROJECT_DIR$/templates/admintemplates/responseModal.php" />
         <option value="$PROJECT_DIR$/templates/admintemplates/admineditpanel.php" />
+        <option value="$PROJECT_DIR$/css/mailStyle.css" />
+        <option value="$PROJECT_DIR$/Messages.php" />
+        <option value="$PROJECT_DIR$/js/methods.js" />
+        <option value="$PROJECT_DIR$/templates/admintemplates/modalMessage.php" />
+        <option value="$PROJECT_DIR$/testfile.php" />
+        <option value="$PROJECT_DIR$/ajaxcall.js" />
       </list>
     </option>
   </component>
@@ -273,6 +259,48 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diplomski" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diplomski" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diplomski" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diplomski" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diplomski" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diplomski" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admintemplates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -282,7 +310,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pvaproject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HRproject/master/integrated/ui" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\node.exe" />
     <property name="SearchEverywhereHistoryKey" value="getCaptchaHtml&#9;null&#9;null&#10;getRo&#9;null&#9;null&#10;make&#9;null&#9;null&#10;queryReq&#9;null&#9;null&#10;login&#9;null&#9;null" />
@@ -348,7 +376,7 @@
     <frame x="-8" y="-8" width="1372" height="754" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23628049" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23628049" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2606383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -376,7 +404,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23246951" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23628049" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2606383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -458,31 +486,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52204585">
-          <caret line="45" column="0" selection-start-line="41" selection-start-column="21" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResponseMessages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9400353">
-          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/errorPage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28385898">
           <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sendtest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -686,14 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/userinterface.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.854546">
-          <caret line="298" column="14" selection-start-line="298" selection-start-column="14" selection-end-line="298" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/message.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.7636366">
@@ -778,48 +777,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testfile.php">
+    <entry file="file://$PROJECT_DIR$/templates/admintemplates/modalAddLesson.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-63.98182">
-          <caret line="207" column="26" selection-start-line="207" selection-start-column="10" selection-end-line="207" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.8589065">
+          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajaxcall.js">
+    <entry file="file://$PROJECT_DIR$/css/responsive.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.4827585">
-          <caret line="43" column="54" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.5467372">
+          <caret line="45" column="0" selection-start-line="41" selection-start-column="21" selection-end-line="45" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Messages.php">
+    <entry file="file://$PROJECT_DIR$/css/userinterface.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6">
-          <caret line="47" column="57" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.33271375">
+          <caret line="114" column="19" selection-start-line="114" selection-start-column="14" selection-end-line="114" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/adminpanel.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36431226">
+          <caret line="149" column="53" selection-start-line="149" selection-start-column="3" selection-end-line="149" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admintemplates/modalResponse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41975307">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sendtest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admintemplates/admineditpanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.927273">
+          <caret line="349" column="52" selection-start-line="349" selection-start-column="52" selection-end-line="349" selection-end-column="52" />
           <folding>
-            <marker date="1506273495665" expanded="true" signature="981:1203" placeholder="INSERT INTO posta... " />
-            <marker date="1506273495665" expanded="true" signature="1504:1551" placeholder="SELECT * FRO... posta" />
-            <marker date="1506273495665" expanded="true" signature="1894:1932" placeholder="SELECT * FRO... posta" />
-            <marker date="1506273495665" expanded="true" signature="2268:2297" placeholder="SELECT * FRO... posta" />
-            <marker date="1506273495665" expanded="true" signature="2549:2588" placeholder="UPDATE posta... " />
-            <marker date="1506273495665" expanded="true" signature="2823:2861" placeholder="SELECT * FRO... posta" />
-            <marker date="1506273495665" expanded="true" signature="3189:3218" placeholder="SELECT * FRO... posta" />
-            <marker date="1506273495665" expanded="true" signature="3840:3869" placeholder="UPDATE posta... " />
-            <marker date="1506273495665" expanded="true" signature="4401:4420" placeholder="DELETE FROM " />
-            <marker date="1506273495665" expanded="true" signature="4949:4978" placeholder="UPDATE posta... " />
-            <marker date="1506273495665" expanded="true" signature="5219:5256" placeholder="SELECT * FRO... posta" />
-            <marker date="1506273495665" expanded="true" signature="5591:5628" placeholder="SELECT * FRO... posta" />
-            <marker date="1506273495665" expanded="true" signature="5964:6002" placeholder="SELECT * FRO... posta" />
+            <marker date="1506276369425" expanded="true" signature="713:853" placeholder="..." />
+            <marker date="1506276369425" expanded="true" signature="745:839" placeholder="..." />
+            <marker date="1506276369425" expanded="true" signature="1503:1750" placeholder="..." />
+            <marker date="1506276369425" expanded="true" signature="1536:1736" placeholder="..." />
+            <marker date="1506276369425" expanded="true" signature="1595:1667" placeholder="..." />
+            <marker date="1506276369425" expanded="true" signature="1668:1675" placeholder="..." />
+            <marker date="1506276369425" expanded="true" signature="5113:5140" placeholder="..." />
+            <marker date="1506276369425" expanded="true" signature="6376:6520" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/mailStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5636363">
-          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.7788104">
+          <caret line="106" column="53" selection-start-line="106" selection-start-column="53" selection-end-line="106" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admintemplates/modalMessage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8076925">
+          <caret line="32" column="74" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResponseMessages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.1636364">
+          <caret line="78" column="27" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="27" />
+          <folding>
+            <marker date="1506023969467" expanded="true" signature="720:753" placeholder="SELECT * FRO... moje_poruke" />
+            <marker date="1506023969467" expanded="true" signature="1103:1144" placeholder="SELECT * FRO... moje_poruke" />
+            <marker date="1506023969467" expanded="true" signature="1494:1536" placeholder="SELECT * FRO... moje_poruke" />
+            <marker date="1506023969467" expanded="true" signature="1939:2110" placeholder="INSERT INTO moje_poruke... " />
+            <marker date="1506023969467" expanded="true" signature="2573:2637" placeholder="UPDATE moje_... " />
+            <marker date="1506023969467" expanded="true" signature="3046:3079" placeholder="DELETE FROM " />
+            <marker date="1506023969467" expanded="true" signature="3313:3377" placeholder="UPDATE moje_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.181818">
+          <caret line="235" column="37" selection-start-line="235" selection-start-column="37" selection-end-line="235" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/methods.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.655172">
+          <caret line="900" column="55" selection-start-line="900" selection-start-column="41" selection-end-line="900" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajaxcall.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.5172415">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -832,60 +906,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admintemplates/admineditpanel.php">
+    <entry file="file://$PROJECT_DIR$/Messages.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.927273">
-          <caret line="340" column="50" selection-start-line="340" selection-start-column="36" selection-end-line="340" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.11524164">
+          <caret line="128" column="47" selection-start-line="128" selection-start-column="47" selection-end-line="128" selection-end-column="47" />
           <folding>
-            <marker date="1506275833632" expanded="true" signature="713:853" placeholder="..." />
-            <marker date="1506275833632" expanded="true" signature="745:839" placeholder="..." />
-            <marker date="1506275833632" expanded="true" signature="1503:1750" placeholder="..." />
-            <marker date="1506275833632" expanded="true" signature="1536:1736" placeholder="..." />
-            <marker date="1506275833632" expanded="true" signature="1595:1667" placeholder="..." />
-            <marker date="1506275833632" expanded="true" signature="1668:1675" placeholder="..." />
-            <marker date="1506275833632" expanded="true" signature="5113:5140" placeholder="..." />
-            <marker date="1506275833632" expanded="true" signature="6376:6520" placeholder="..." />
+            <marker date="1506280250563" expanded="true" signature="981:1203" placeholder="INSERT INTO posta... " />
+            <marker date="1506280250563" expanded="true" signature="1504:1551" placeholder="SELECT * FRO... posta" />
+            <marker date="1506280250563" expanded="true" signature="1894:1932" placeholder="SELECT * FRO... posta" />
+            <marker date="1506280250563" expanded="true" signature="2268:2297" placeholder="SELECT * FRO... posta" />
+            <marker date="1506280250563" expanded="true" signature="2549:2588" placeholder="UPDATE posta... " />
+            <marker date="1506280250563" expanded="true" signature="2823:2861" placeholder="SELECT * FRO... posta" />
+            <marker date="1506280250563" expanded="true" signature="3189:3218" placeholder="SELECT * FRO... posta" />
+            <marker date="1506280250563" expanded="true" signature="3547:3576" placeholder="UPDATE posta... " />
+            <marker date="1506280250563" expanded="true" signature="3547:3585" placeholder="UPDATE posta... " />
+            <marker date="1506280250563" expanded="true" signature="4106:4135" placeholder="UPDATE posta... " />
+            <marker date="1506280250563" expanded="true" signature="4667:4686" placeholder="DELETE FROM " />
+            <marker date="1506280250563" expanded="true" signature="5215:5244" placeholder="UPDATE posta... " />
+            <marker date="1506280250563" expanded="true" signature="5485:5522" placeholder="SELECT * FRO... posta" />
+            <marker date="1506280250563" expanded="true" signature="5857:5894" placeholder="SELECT * FRO... posta" />
+            <marker date="1506280250563" expanded="true" signature="6230:6268" placeholder="SELECT * FRO... posta" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admintemplates/modalAddLesson.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8589065">
-          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admintemplates/responseModal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/adminpanel.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.153846">
-          <caret line="694" column="0" selection-start-line="694" selection-start-column="0" selection-end-line="694" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/methods.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6846543">
-          <caret line="680" column="73" selection-start-line="680" selection-start-column="73" selection-end-line="680" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -1,34 +1,16 @@
 /**
  * Created by milic on 16.9.2017..
  */
+$("body").on("click","#responde",function(){
+    $("#popupResponse").toggle(300);
+    $("textarea[name=responseMessage]").val('');
 
-//function myFunction() {
-//    $.ajax({
-//        type: "POST",
-//        url: "testfile.php?action=add-user",
-//        data: {
-//           first_name:'admin',
-//           last_name:'admin',
-//           username:'admin' ,
-//           email :'admin@gmail.com' ,
-//           password : 'admin',
-//           status :1 ,
-//           role :1
-//},
-//    success
-//        :
-//        function(response) {
-//
-//            //var data = JSON.parse(response);
-//            //console.log('Svi opisi aktivnih kurseva');
-//            //data.forEach(function (e) {
-//            //    console.log("opis " + e.naziv + " kursa\n" + e.opis);
-//            //});
-//            alert("gotovo " + response);
-//        }
-//})
-//    ;
-//};
+});
+$("body").on("click","#cancleResponse",function(){
+    console.log('clicked on responde');
+    $("#popupResponse").toggle(300);
+    $("textarea[name=responseMessage]").val('');
+});
 
 $("body").on("click", ".saveChanges", function () {
 
@@ -268,5 +250,26 @@ $("body").on("click","#submitMessage",function(){
         }
     })
    }
+
+});
+$("body").on("click","#sendResponse",function(){
+
+    var thisButton=this;
+    var data={
+        to:document.getElementById('mailDisplay').innerText,
+        subject:document.getElementById('messageSubject').innerText,
+        message:$("textarea[name=responseMessage]").val(),
+        id:thisButton.getAttribute('data-id')
+    };
+    $.ajax({
+        type:"POST",
+        async:false,
+        url:"testfile.php?action=send-message",
+        data:data,
+        success:function(response){
+            $("textarea[name=responseMessage]").val('');
+        }
+    })
+
 
 });

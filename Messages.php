@@ -123,7 +123,18 @@ class Messages
     }
 
 
+    public static function readOne($id){
+        $qry="UPDATE posta SET procitana=1 WHERE id=$id";
 
+        $result=Connection::queryRequest($qry);
+
+        if($result){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     public static function markAllRead($ids){
 
         $queryCondition='WHERE ';
@@ -131,11 +142,11 @@ class Messages
 
         for($i=0;$i<$size;$i++){
 
-            if($i!=$size-1){
-                $queryCondition.="id=".$ids[$i]."OR";
+            if($i==$size-1){
+                $queryCondition.="id=".$ids[0][$i];
             }
             else{
-                $queryCondition.="id=".$ids[$i];
+                $queryCondition.="id=".$ids[0][$i]."OR";
             }
         }
 
