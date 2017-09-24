@@ -27,6 +27,8 @@ var warningMessages = {
 };
 var roles;
 var courses;
+var unreadMessages=0;
+var messages;
 function getRoles() {
     var response = null;
     response = $.ajax({
@@ -360,7 +362,6 @@ function fillWithLessons(data) {
 
     var masterParent = document.getElementById('lessonData');
     masterParent.innerHTML = "";
-    console.log('enter function');
     if (isEmpty(data)) {
 
         var row = document.createElement('tr');
@@ -634,6 +635,54 @@ function fillWithMessages(data) {
         masterParent.appendChild(row);
     }
     else {
+        data.forEach(function(e){
+            var row = document.createElement('tr');
+            if(e.procitana==0){
+                unreadMessages++;
+            }
+            else{
+                row.className='readMEssage';
+            }
+            var i = 0;
+            var key;
+            var columnArray = [];
+
+            for (i = 0; i < 5; i++) {
+                var col = document.createElement('td');
+                col.className = 'contentField';
+                columnArray.push(col);
+            }
+
+
+            var checkbox=document.createElement('input');
+            checkbox.setAttribute('value', e.id);
+            checkbox.setAttribute('type','checkbox');
+            columnArray[0].appendChild(checkbox);
+
+            columnArray[1].innerText = e.posiljalac_ime+" "+ e.posiljalac_prezime;
+            columnArray[2].innerText= e.naslov;
+            columnArray[3].innerText= ((e.poruka).substr(0,50))+"...";
+
+            var span = document.createElement('span');
+            span.className = 'glyphicon glyphicon-plus';
+            span.setAttribute('data-id', e.id);
+            span.setAttribute('data-toggle', 'modal');
+            span.setAttribute('data-target', '#messageModal');
+            span.setAttribute('onclick', 'openMessageModal(this)');
+
+            columnArray[4].appendChild(span);
+            for (i = 0; i < columnArray.length; i++) {
+                row.appendChild(columnArray[i]);
+            }
+            masterParent.appendChild(row);
+        });
+        if(unreadMessages>0){
+            document.getElementById('newMessages').innerText=unreadMessages;
+            document.getElementById('newMessages').style.display='inline';
+        }
+        else{
+            document.getElementById('newMessages').style.display='none';
+        }
     }
 
 }
@@ -817,10 +866,8 @@ function clearFields(){
     }
     buttonContainer.innerHTML='<input type="submit" class="submitBtn" id="btnAddLessonSubmit" value="Sačuvaj lekciju">';
 }
-function getAllActiveCourses() {
-}
-function getAllActiveLessons() {
-}
+
+
 
 $('document').ready(
     getRoles(),
@@ -830,5 +877,7 @@ $('document').ready(
     fillWithCurses(courses),
     dataLessons = getAll('get-all-lessons'),
     fillWithLessons(dataLessons),
-    getMyData()
+    getMyData(),
+    messages=getAll('get-all-messages'),
+    fillWithMessages(messages)
 );

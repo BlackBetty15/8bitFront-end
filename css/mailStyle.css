@@ -41,6 +41,7 @@
     min-height: 42.75rem;
     max-height: 42.75rem;
     overflow-y: scroll;
+    overflow-x:hidden;
 }
 .messageHeader{
     background-color:#344e33;
@@ -57,11 +58,11 @@ tr th{
 }
 
 #tableBodyInbox tr{
-    background-color:#d5deac;
+    background-color:#d9e69d;
     color:black;
 }
 .table>tbody>tr>td{
-    border-color: #2b542c !important;
+    border-color: transparent !important;
 }
 #mailContent::-webkit-scrollbar-track{
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -83,4 +84,7 @@ tr th{
 }
 #tableHeader{
     position: static;
+}
+.readMEssage{
+    background-color: #e2dede!important;
 }

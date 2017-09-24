@@ -48,9 +48,7 @@ if(!isset($_SESSION['idKorisnik']) || !isset($_SESSION['role']) || !isset($_SESS
         echo '<li class="cardMenu" href="#" data-panel="inbox" onclick="switchCards(this)">
 
             <p class="navText">
-                Pristigle <span style="-webkit-border-radius:50% ;-moz-border-radius:50% ;border-radius: 50%; height: 30px;
-            width:30px; background-color:red;">12
-                </span>
+                Pristigle <span  id="newMessages" style="height: 1.5rem ;width:1.5rem; padding:0.125rem;background-color:#a94442;"></span>
                 <br>
                 poruke
             </p>
@@ -328,6 +326,15 @@ if(!isset($_SESSION['idKorisnik']) || !isset($_SESSION['role']) || !isset($_SESS
 </div>
 
 <div class="modal fade" id="lessonModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <?php include_once 'modalAddLesson.php'; ?>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="responseModal" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">

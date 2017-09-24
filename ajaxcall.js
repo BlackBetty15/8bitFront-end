@@ -223,3 +223,50 @@ $("body").on("click","#btnSaveLessonChanges",function(){
         }
     })
 });
+
+$("body").on("click","#submitMessage",function(){
+    event.preventDefault();
+    var errorField=document.getElementById('captchaError');
+   if( checkForm()){
+    data={
+        name:$("input[name=name]").val(),
+        surname:$("input[name=surname]").val(),
+        email:$("input[name=email]").val(),
+        subject:$("input[name=subject]").val(),
+        message:$("textarea[name=message]").val(),
+        captcha_code:$("input[name=captcha_code]").val()
+    };
+
+    $.ajax({
+        type:"POST",
+        async:false,
+        url:"messageValidation.php",
+        data:data,
+        success:function(response){
+            switch (response){
+                case '0':{
+                    errorField.innerText="Došlo je do greške, pokušajte kasnije";
+                    break;
+                }
+                case '1':{
+                    alert("Sve je u redu");
+                    errorField.innerText="";
+                    $("input[name=name]").val('');
+                    $("input[name=surname]").val('');
+                    $("input[name=email]").val('');
+                    $("input[name=subject]").val('');
+                    $("textarea[name=message]").val('');
+                    $("input[name=captcha_code]").val('');
+
+                    break;
+                }
+                case '2':{
+                    errorField.innerText="Pogrešan kod";
+                    break;
+                }
+            }
+        }
+    })
+   }
+
+});

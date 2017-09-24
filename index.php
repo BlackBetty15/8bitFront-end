@@ -15,24 +15,11 @@ include 'templates/usertemplates/userheader.php';
             </div>
             <div id="menu" class="table-responsive">
                 <nav id="menuChose" class="container-fluid">
-                    <table  >
-                        <tr><td id="zaglavlje" colspan="5">Odaberite  jezik  za  učenje:</td></tr>
-                        <tr class="ostatak">
-                            <td></td>
-                            <td><a>HTML</a></td>
-                            <td></td>
-                        </tr>
-                        <tr class="ostatak">
-                            <td></td>
-                            <td><a>CSS</a></td>
-                            <td></td>
-                        </tr>
-                        <tr class="ostatak">
-                            <td></td>
-                            <td><a>JavaScript</a></td>
-                            <td></td>
-                        </tr>
-                    </table>
+                    <div class="menu">
+                        <h6 id="zaglavlje">Odaberite jezik za učenje:</h6>
+                        <ul id="courseList">
+                        </ul>
+                    </div>
                 </nav>
             </div>
         </div>

@@ -45,7 +45,7 @@ class Messages
 
     public static function listAllMessages(){
 
-        $qry="SELECT * FROM posta WHERE 1";
+        $qry="SELECT * FROM posta WHERE 1 ORDER BY datum DESC";
         $results=Connection::queryRequest($qry);
         $response=array();
 

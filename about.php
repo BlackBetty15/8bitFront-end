@@ -8,7 +8,7 @@ include_once 'templates/usertemplates/userheader.php';
 <div class="container">
 
     <div class="container-fluid">
-         <div class="jumbotron">
+         <div class="jumbotron" id="aboutJumbatron">
             <h1 class="display-3 pageHeader">O Projektu: </h1>
 
             <p class="aboutParagraph">

@@ -41,7 +41,7 @@ html,body{
 }
 header{
     width: 100%;
-    min-width: 410px;
+    min-width:  27.33rem;
     height: auto;
 }
 #mainnav{
@@ -50,7 +50,7 @@ header{
     display: block;
     height: auto;
     border-radius: 0;
-    min-width: 600px;
+    min-width: 40rem;
 }
 #bottomNav{
     background-color: #297045;
@@ -59,8 +59,8 @@ header{
     clear: both;
     position: relative;
     z-index: 10;
-    min-width: 600px;
-    height: 150px;
+    min-width: 40rem;
+    height: 10rem;
     margin-bottom: -3em;
 }
 
@@ -69,48 +69,79 @@ header{
 }
 
 #logoSlika{
-    max-height: 225px;
-    max-width:620px;
+    max-height: 15rem;
+    max-width:41.33rem;
     margin: auto;
-    padding: 10px;
+    padding:0.6667rem;
 }
 
 
 #menu{
-    height:350px;
-    width: 100%;
+    height: 23.33rem;
+
 
 }
 #menuChose {
     background-image: url("../images/meni.png");
-    width: 500px;
-    padding: 50px;
-    height: 350px;
+    width: 33.33rem;
+    padding: 3.333rem;
+    height:  23.33rem;
     background-size: contain;
     background-repeat: no-repeat;
     margin:  auto;
 }
-
-#menuChose table{
-    height:120px;
-    margin:  auto;
-    font-family: WebpixelRegular, monospace;
-    cursor: default;
+ul{
+    list-style-type: none;
 }
-
-#menuChose .ostatak  {
+ul .ostatak  {
     color:#94d052;
-    height:1rem;
-    margin:  0 auto;
+    margin:  1.7rem auto;
     font-size: 1.667rem;
     text-align: center;
     border-spacing: 0;
     padding:0;
     font-family: WebpixelBlack, monospace;
-
+    border: 1px solid transparent;
 }
-.table-responsive{
-    font-size: 14px;
+ul .ostatak a{
+    color: #94d052;
+    text-decoration: none;
+    position: absolute;
+    left: 0;
+    right:0;
+    display: table-cell;
+    border:1px solid transparent;
+}
+ul .ostatak a:hover{
+    background-color: #94d052;
+    color: #000f1e;
+}
+.menu{
+    position: relative;
+    width: 100%;
+    height:65%;
+    max-height: 70%;
+    overflow-y: scroll;
+}
+.menu::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.menu::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.menu::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.menu::-webkit-scrollbar-thumb {
+    background-color: #afc852;
+    height:1rem;
+    outline: 1px solid #2d5e2d;
+    border-radius:0.5rem;
+
+}.table-responsive{
+    font-size: 0.9333rem;
     border: none;
 }
 #menuChose .ostatak td:nth-child(2):hover{
@@ -123,8 +154,8 @@ header{
 }
 
 #zaglavlje{
-    font-size: 35px;
-    height:20px;
+    font-size: 2.333rem;
+    height:1.333rem;
     color:#94d052;
     margin: 0;
     padding:0;
@@ -134,7 +165,7 @@ header{
 #bottomNav p{
     margin: auto;
     text-align: center;
-    font-size:20px;
+    font-size:1.333rem;
     color:#94d052;
 }
 #DownButton{
@@ -142,16 +173,16 @@ header{
     font-family: WebpixelRegular, monospace;
     color: #94d052;
     background-color: #297045;
-    height:50px;
-    width:50px;
+    height: 3.333rem;
+    width: 3.333rem;
     position: absolute;
-    bottom: -9px;
+    bottom: -0.6rem;
     right:0;
     left:0;
     border-radius:50%;
-    font-size:30px;
+    font-size:2rem;
     margin: 0 auto;
-    line-height: 80px;
+    line-height: 5.333rem;
     text-align: center;
     cursor: default;
 }
@@ -164,7 +195,7 @@ header{
 }
 #dropdown{
     width: 100%;
-    height:150px;
+    height:10rem;
     display: none;
 }
 
@@ -177,24 +208,24 @@ header{
 #about{
     background-color: floralwhite;
     width:100%;
-    height: 800px;
+    height: 53.33rem;
 }
 
 .pageHeader{
     color: #9a3b39;
     font-weight:bolder;
     text-align: left;
-    font-size:60px;
-    padding:15px;
+    font-size:4rem;
+    padding:1rem;
 }
 .aboutArticle{
-    font-size:25px;
+    font-size:1.667rem;
     color:#9a3b39;
     font-weight: bold;
 }
 .aboutParagraph{
     text-align: justify;
-    text-indent:35px;
+    text-indent:2.333rem;
 }
 #signature{
     font-size:2rem;
@@ -223,4 +254,48 @@ header{
 .navbar-default .navbar-nav>li>a:hover {
     color: whitesmoke;
     background-color: transparent;
+}
+#courseDescriptionJumbatron, #courseLessonsJumbatron, #aboutJumbatron, #messageJumbatron{
+    min-height: 31.25rem;
+    height: auto;
+    margin: 3.125rem 0;
+    border-radius: 0.625rem;
+    background-color: #e0f098;
+    border-top: 0.25rem solid #a5bb48;
+    border-bottom: 0.25rem solid #a5bb48;
+    border-right: 0.125rem solid #a5bb48;
+
+}
+#lessonDescriptionJumbatron{
+    height: auto;
+    margin: 3.125rem 0;
+    border-radius: 0.625rem;
+    background-color: #e0f098;
+    border-top: 0.25rem solid #a5bb48;
+    border-bottom: 0.25rem solid #a5bb48;
+    border-right: 0.125rem solid #a5bb48;
+}
+.listLesson a{
+    color:#9a3b39;
+    text-decoration:none;
+    font-size:1.7rem;
+    font-weight: bold;
+
+}
+.listLesson a:hover{
+    color:darkgreen;
+}
+label,input,textarea,button{
+    font-size:1.2rem;
+    font-family: "Courier New";
+    color:#6b7d3e;
+}
+#submitMessage,#startCode{
+    background-color:#6b7d3e;
+    color:whitesmoke;
+}
+#iframeCode{
+    width:100%;
+    height: 31rem;
+    background-color: white;
 }

@@ -19,7 +19,18 @@ class Cours
         $this->coursStatus=$status;
     }
 
+    public static function getOneCourse($id){
 
+        $qry="SELECT * FROM  kursevi WHERE id=$id";
+        $results=Connection::queryRequest($qry);
+        if(Connection::emptyQueryResults($results)){
+            return $results->fetch_assoc();
+        }
+        else{
+            return "Kurs ne postoji";
+        }
+
+    }
     public static function getAllCourses(){
         $qry="SELECT * FROM  kursevi WHERE 1";
 
