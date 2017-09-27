@@ -5,7 +5,7 @@ include_once 'config.php';
 class Connection
 {
 
-    private $con; /*konekcija*/
+    private $con;
     private static $point;
 
     private function __construct()

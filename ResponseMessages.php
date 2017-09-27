@@ -36,7 +36,7 @@ class ResponseMessages
         $results = Connection::queryRequest($qry);
         $response = array();
 
-        if (Connection::emptyQueryResults($qry)) {
+        if (Connection::emptyQueryResults($results)) {
             while ($row = $results->fetch_assoc()) {
                 $response[] = $row;
             }

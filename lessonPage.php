@@ -12,6 +12,7 @@ require_once "Lesson.php";
             <div class="col-md-12">
                 <div class="jumbotron jumbotron-fluid" id="lessonDescriptionJumbatron">
                     <div class="container">
+                        <h1 class="display-3">Opis lekcije:</h1>
                         <p class="lead" id="courseDescription">
                             <?php
 

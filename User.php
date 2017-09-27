@@ -37,11 +37,9 @@ class User
             while($row=$results->fetch_assoc()){
                 $response[]=$row;
             }
+        }
             return $response;
-        }
-        else{
-            return 'There is no user yet';
-        }
+
 
     }
     public static function getSpecificUser($id){
@@ -235,18 +233,10 @@ class User
     public static function login($username,$password){
 
 
-        $options = [
-            'cost' => 12,
-            'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
-        ];
-
-
-
-
             $qry="SELECT * FROM korisnici WHERE korisnicko_ime='".$username."'";
 
             $results = Connection::queryRequest($qry);
-            $error=''; /* Sredi đokicu*/
+            $error='';
 
             if(Connection::emptyQueryResults($results)){
                 $results=$results->fetch_assoc();

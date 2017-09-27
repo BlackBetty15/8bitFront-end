@@ -177,14 +177,6 @@ $("body").on("click","#changePassword",function(){
 $("body").on("click","#btnSaveLessonChanges",function(){
 
     event.preventDefault();
-    //var id= this.getAttribute('data-id');
-    //var newName=$("input[name=lessonName]").val();
-    //var newStatus=$("input[name=lessonRadio]:checked").val();
-    //var newDescription=$("textarea[name=lessonDescription]").val();
-    //var newCode=$("textarea[name=lessonCode]").val();
-    //var newCourse=$("select[name=coursSelect]").find(":selected").val();
-
-
 
     data={
         id:this.getAttribute('data-id'),
@@ -271,5 +263,103 @@ $("body").on("click","#sendResponse",function(){
         }
     })
 
+
+});
+$selectState=0;
+$boxState=0;
+$("#allSelect").change(function(){
+    var checkboxes=document.getElementsByClassName('receivedCheck');
+    var i;
+    if($selectState==0){
+        for(i=0;i<checkboxes.length;i++){
+            checkboxes[i].checked=true;
+        }
+        $selectState=1;
+    }
+        else{
+        for(i=0;i<checkboxes.length;i++){
+            checkboxes[i].checked=false;
+        }
+        $selectState=0;
+      }
+
+});
+$("body").on("change","#actionDropdown",function(){
+
+    $thisButton=this;
+    var action=  $("select[name=actionDropdown]").find(":selected").val();
+    alert("Action selected:"+action);
+    var checkboxes=document.getElementsByClassName('receivedCheck');
+    var ids=[];
+    var request;
+
+    for(var i=0;i<checkboxes.length;i++){
+
+        if(checkboxes[i].checked){
+            console.log(checkboxes[i]);
+            var id=parseInt(checkboxes[i].getAttribute('value'));
+            ids.push(id);
+        }
+    }
+    if(action==0){
+        if(!isEmpty(ids)){
+        $.ajax({
+            type:"POST",
+            async:false,
+            url:"testfile.php?action=delete-messages",
+            data:{id_array:ids},
+            success:function(response){
+                alert(response);
+
+            }
+        })
+        }
+
+    }
+    if(action==1){
+        if(!isEmpty(ids)){
+            $.ajax({
+                type:"POST",
+                async:false,
+                url:"testfile.php?action=mark-as-read-message",
+                data:{id_array:ids},
+                success:function(response){
+                    alert(response);
+
+                }
+            })
+        }
+    }
+
+    messages=getAll('get-all-messages');
+    unreadMessages=0;
+    fillWithMessages(messages);
+    document.getElementById("allSelect").checked=false;
+    $selectState=0;
+    $thisButton.options[0].select=true;
+    document.getElementById('actionDropdown').innerHTML=' ' +
+        '<option value="2" disabled selected>Izaberi opciju</option>'+
+        '<option value="0">Obriši</option>'+
+        ' <option value="1">Označi kao pročitano</option>';
+});
+$("body").on("click","#inboxReceive",function(){
+    messages=getAll('get-all-messages');
+    unreadMessages=0;
+    fillWithMessages(messages);
+    document.getElementById('subjectField').innerText="Naslov";
+    document.getElementById('who').innerHTML="Pošiljalac";
+    document.getElementById('subjectField').style.display='table-cell';
+    document.getElementById('optionMarkRead').style.display='block';
+    $boxState=0;
+
+});
+$("body").on("click","#outboxSent",function(){
+    $boxState=1;
+    document.getElementById("who").innerText="Primalac";
+        document.getElementById('subjectField').style.display='none';
+        document.getElementById('optionMarkRead').style.display='none';
+        sentMessages=getAll('get-all-sent-messages');
+
+        fillWithSent(sentMessages);
 
 });

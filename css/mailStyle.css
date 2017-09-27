@@ -106,3 +106,16 @@ tr th{
 #responde:hover{
     text-shadow: 0.0625rem 0.0625rem 0.9375rem white;
 }
+#actionDropdown{
+    width: 6.667rem;
+}
+#inboxReceive:hover{
+    text-shadow: 0.0625rem 0.0625rem 0.9375rem white;
+}
+#outboxSent:hover {
+
+    text-shadow: 0.0625rem 0.0625rem 0.9375rem white;
+}
+#messageFull {
+    color: black;
+}

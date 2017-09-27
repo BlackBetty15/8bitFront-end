@@ -215,16 +215,24 @@ switch($action){
 
     case 'delete-messages':{
 
-        $ids=trim($_POST['id_array']);
-        $response=Messages::deleteAllMessages($ids);
+        $ids=($_POST['id_array']);
+        $newArray=array();
+        foreach($ids as $i){
+            $newArray[]= ((int) $i);
+        }
+        $response=Messages::deleteAllMessages($newArray);
 
-        echo $response;
+        var_dump( $response);
         break;
     }
 
     case 'mark-as-unread-messages':{
 
-        $ids=trim($_POST['id_array']);
+        $ids=($_POST['id_array']);
+        $newArray=array();
+        foreach($ids as $i){
+            $newArray[]= ((int) $i);
+        }
         $response=Messages::markAllUnread($ids);
         echo $response;
 
@@ -268,7 +276,13 @@ switch($action){
 
         break;
     }
-//    case '':{break;}
+        case 'get-all-sent-messages':{
+
+            $response=ResponseMessages::getMyMessages();
+            $_SESSION['poslate']=$response;
+            echo json_encode( $response);
+            break;
+        }
 //    case '':{break;}
 //    case '':{break;}
 //    case '':{break;}

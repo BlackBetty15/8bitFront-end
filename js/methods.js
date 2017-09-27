@@ -29,6 +29,7 @@ var roles;
 var courses;
 var unreadMessages=0;
 var messages;
+var sentMessages;
 function getRoles() {
     var response = null;
     response = $.ajax({
@@ -498,7 +499,7 @@ function fillWithUsers(data) {
             //button.setAttribute('data-question-type', "0");
             //button.setAttribute('data-target', '#questionModal');
             //button.setAttribute('onclick', 'questionManagement(this)');
-            button.setAttribute('data-id', e.role);
+            button.setAttribute('data-id', e.id);
             button.innerHTML = '<span class="glyphicon glyphicon-trash button-trash"></span>';
             columnArray[5].appendChild(button);
 
@@ -658,6 +659,7 @@ function fillWithMessages(data) {
             var checkbox=document.createElement('input');
             checkbox.setAttribute('value', e.id);
             checkbox.setAttribute('type','checkbox');
+            checkbox.className='receivedCheck';
             columnArray[0].appendChild(checkbox);
 
             columnArray[1].innerText = e.posiljalac_ime+" "+ e.posiljalac_prezime;
@@ -715,6 +717,7 @@ function getAll(request) {
         url: "testfile.php?action=" + request,
         async: false,
         success: function (resp) {
+
         }
     }).responseText;
 
@@ -722,7 +725,7 @@ function getAll(request) {
     if (data) {
         return data;
     }
-    return null;
+    return 'error';
 }
 function saveCoursChanges(e) {
 
@@ -910,6 +913,82 @@ function fillMessageDetail(data){
     mail.innerText=data[0].posiljalac;
     date.innerText=data[0].datum;
     responseButton.setAttribute('data-id',data[0].id);
+}
+function fillWithSent(data){
+    var masterParent = document.getElementById('tableBodyInbox');
+    masterParent.innerHTML="";
+    console.log('enter function');
+    if (isEmpty(data)) {
+
+        var row = document.createElement('tr');
+        row.className = 'userTableContent';
+        var col = document.createElement('td');
+        col.className = 'contentField';
+        col.innerText = "Nemate poruka.";
+        col.colSpan = "5";
+        row.appendChild(col);
+        masterParent.appendChild(row);
+    }
+    else{
+        data.forEach(function(e){
+            console.log(JSON.stringify(e));
+            var row = document.createElement('tr');
+
+            var i = 0;
+            var key;
+            var columnArray = [];
+
+            for (i = 0; i < 4; i++) {
+                var col = document.createElement('td');
+                col.className = 'contentField';
+                columnArray.push(col);
+            }
+
+
+            var checkbox=document.createElement('input');
+            checkbox.setAttribute('value', e.id);
+            checkbox.setAttribute('type','checkbox');
+            checkbox.className='receivedCheck';
+            columnArray[0].appendChild(checkbox);
+
+            columnArray[1].innerText = e.primalac;
+
+
+            columnArray[2].innerText= ((e.poruka).substr(0,50))+"...";
+
+            var span = document.createElement('span');
+            span.className = 'glyphicon glyphicon-plus';
+            span.setAttribute('data-id', e.id);
+            span.setAttribute('data-toggle', 'modal');
+            span.setAttribute('data-target', '#sentModal');
+            span.setAttribute('onclick', 'openSentMessage(this)');
+
+            columnArray[3].appendChild(span);
+            for (i = 0; i < columnArray.length; i++) {
+                row.appendChild(columnArray[i]);
+            }
+            masterParent.appendChild(row);
+        });
+        if(unreadMessages>0){
+            document.getElementById('newMessages').innerText=unreadMessages;
+            document.getElementById('newMessages').style.display='inline';
+        }
+        else{
+            document.getElementById('newMessages').style.display='none';
+        }
+    }
+
+}
+function openSentMessage(e){
+    var idMessage= e.getAttribute('data-id');
+    var content;
+    sentMessages.forEach(function(m){
+        if(m.id== idMessage){
+            content= m.poruka;
+        }
+    });
+    document.getElementById('messageFull').innerText=content;
+
 }
 $('document').ready(
     getRoles(),

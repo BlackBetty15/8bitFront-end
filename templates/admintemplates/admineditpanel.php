@@ -1,8 +1,9 @@
 <?php
 
-if(!isset($_SESSION['idKorisnik']) || !isset($_SESSION['role']) || !isset($_SESSION['korisnik']) ||
-   !isset($_SESSION['status'])){
-    header("Location: errorPage.php" );
+if (!isset($_SESSION['idKorisnik']) || !isset($_SESSION['role']) || !isset($_SESSION['korisnik']) ||
+    !isset($_SESSION['status'])
+) {
+    header("Location: errorPage.php");
     die();
 }
 
@@ -17,8 +18,8 @@ if(!isset($_SESSION['idKorisnik']) || !isset($_SESSION['role']) || !isset($_SESS
             </p>
         </li>
         <?php
-        if(isset($_SESSION['role']) && $_SESSION['role']==1){
-        echo '
+        if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {
+            echo '
             <li class="cardMenu" href="#" data-panel="manageUsers" onclick="switchCards(this)">
             <p class="navText">
                 Upravljanje
@@ -44,8 +45,8 @@ if(!isset($_SESSION['idKorisnik']) || !isset($_SESSION['role']) || !isset($_SESS
         </li>
         <?php
 
-        if(isset($_SESSION['role'])&& $_SESSION['role']==1){
-        echo '<li class="cardMenu" href="#" data-panel="inbox" onclick="switchCards(this)">
+        if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {
+            echo '<li class="cardMenu" href="#" data-panel="inbox" onclick="switchCards(this)">
 
             <p class="navText">
                 Pristigle <span  id="newMessages" style="height: 1.5rem ;width:1.5rem; padding:0.125rem;background-color:#a94442;"></span>
@@ -54,7 +55,7 @@ if(!isset($_SESSION['idKorisnik']) || !isset($_SESSION['role']) || !isset($_SESS
             </p>
         </li> ';
         }
-?>
+        ?>
 
     </ul>
 </div>
@@ -67,11 +68,11 @@ if(!isset($_SESSION['idKorisnik']) || !isset($_SESSION['role']) || !isset($_SESS
 
         <table class="table table-responsive">
             <thead>
-                <td class="peopleTableHead">Ime kursa</td>
-                <td class="peopleTableHead">Opis</td>
-                <td class="peopleTableHead">Status</td>
-                <td class="peopleTableHead">Obriši</td>
-                <td class="peopleTableHead">Sačuvaj</td>
+            <td class="peopleTableHead">Ime kursa</td>
+            <td class="peopleTableHead">Opis</td>
+            <td class="peopleTableHead">Status</td>
+            <td class="peopleTableHead">Obriši</td>
+            <td class="peopleTableHead">Sačuvaj</td>
             </thead>
             <tbody id="allCourses" class="tableBodyEditPanel">
 
@@ -89,36 +90,36 @@ if(!isset($_SESSION['idKorisnik']) || !isset($_SESSION['role']) || !isset($_SESS
 
         <div class="col-md-10 formCommon noShadow">
             <fieldset>
-            <div class="row">
+                <div class="row">
+                    <br>
+                    <div class="col-md-2 inlineLabel">Naziv kursa:</div>
+                    <div class="col-md-6"><input type="text" id="coursName" name="cours_name"></div>
+                    <div class="col-md-1 inlineLabel">Aktiviraj:</div>
+                    <div class="col-md-1">
+                        <label>Da</label>
+                        <input type="radio" name="coursRadio" value="1" checked>
+                    </div>
+                    <div class="col-md-1">
+                        <label>Ne</label>
+                        <input type="radio" name="coursRadio" value="0">
+                    </div>
+                </div>
                 <br>
-                <div class="col-md-2 inlineLabel">Naziv kursa:</div>
-                <div class="col-md-6"><input type="text" id="coursName" name="cours_name"></div>
-                <div class="col-md-1 inlineLabel">Aktiviraj:</div>
-                <div class="col-md-1">
-                    <label>Da</label>
-                    <input type="radio" name="coursRadio"  value="1" checked>
+                <br>
+                <div class="row">
+                    <div class="col-md-2 inlineLabel">Opis kursa:</div>
+                    <div class="col-md-6">
+                        <textarea id="coursDescription" rows="7" cols="53" name="cours_description"></textarea>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn-success" id="saveNewCours">Sačuvaj</button>
+                    </div>
                 </div>
-                <div class="col-md-1">
-                    <label>Ne</label>
-                    <input type="radio" name="coursRadio" value="0">
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="row">
-                <div class="col-md-2 inlineLabel">Opis kursa:</div>
-                <div class="col-md-6">
-                    <textarea id="coursDescription" rows="7" cols="53" name="cours_description"></textarea>
-                </div>
-                <div class="col-md-2">
-                    <button class="btn-success" id="saveNewCours">Sačuvaj</button>
-                </div>
-            </div>
-            <br>
+                <br>
                 <div class="row" id="coursError">
 
                 </div>
-        </fieldset>
+            </fieldset>
         </div>
 
         <div class="col-md-1"></div>
@@ -135,13 +136,13 @@ if(!isset($_SESSION['idKorisnik']) || !isset($_SESSION['role']) || !isset($_SESS
         <table class="table table-responsive">
 
             <thead>
-                <td class="peopleTableHead">Ime</td>
-                <td class="peopleTableHead">Prezime</td>
-                <td class="peopleTableHead">Email</td>
-                <td class="peopleTableHead">Status</td>
-                <td class="peopleTableHead">Uloga</td>
-                <td class="peopleTableHead">Obriši</td>
-                <td class="peopleTableHead">Sačuvaj</td>
+            <td class="peopleTableHead">Ime</td>
+            <td class="peopleTableHead">Prezime</td>
+            <td class="peopleTableHead">Email</td>
+            <td class="peopleTableHead">Status</td>
+            <td class="peopleTableHead">Uloga</td>
+            <td class="peopleTableHead">Obriši</td>
+            <td class="peopleTableHead">Sačuvaj</td>
             </thead>
             <tbody id="allUsers" class="tableBodyEditPanel">
 
@@ -165,10 +166,10 @@ if(!isset($_SESSION['idKorisnik']) || !isset($_SESSION['role']) || !isset($_SESS
         <legend>Lekcije:</legend>
         <table class="table table-responsive">
             <thead>
-                <td class="peopleTableHead">Naziv lekcije</td>
-                <td class="peopleTableHead">Naziv kursa</td>
-                <td class="peopleTableHead">Obriši</td>
-                <td class="peopleTableHead">Detalji</td>
+            <td class="peopleTableHead">Naziv lekcije</td>
+            <td class="peopleTableHead">Naziv kursa</td>
+            <td class="peopleTableHead">Obriši</td>
+            <td class="peopleTableHead">Detalji</td>
             </thead>
             <tbody id="lessonData" class="tableBodyEditPanel">
 
@@ -294,7 +295,7 @@ if(!isset($_SESSION['idKorisnik']) || !isset($_SESSION['role']) || !isset($_SESS
 
         <div class="row">
             <div class="container-fluid">
-                <?php include_once 'mailbox.php'?>
+                <?php include_once 'mailbox.php' ?>
             </div>
         </div>
     </div>
@@ -348,6 +349,23 @@ if(!isset($_SESSION['idKorisnik']) || !isset($_SESSION['role']) || !isset($_SESS
         <div class="modal-content">
             <div class="modal-body">
                 <?php include_once 'modalMessage.php'; ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="sentModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" style="color:#efe1f9;" class="close" data-dismiss="modal">&times;</button>
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="jumbotron" id="messageFull">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

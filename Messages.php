@@ -141,12 +141,14 @@ class Messages
         $size=sizeof($ids);
 
         for($i=0;$i<$size;$i++){
+            $id=$ids[$i];
+            $id=(int) $id;
+            if($i!=$size-1){
 
-            if($i==$size-1){
-                $queryCondition.="id=".$ids[0][$i];
+                $queryCondition.="id=".$id." OR ";
             }
             else{
-                $queryCondition.="id=".$ids[0][$i]."OR";
+                $queryCondition.="id=".$id;
             }
         }
 
@@ -166,12 +168,14 @@ class Messages
         $size=sizeof($ids);
 
         for($i=0;$i<$size;$i++){
-
+            $id=$ids[$i];
+            $id=(int) $id;
             if($i!=$size-1){
-                $queryCondition.="id=".$ids[$i]."OR";
+
+                $queryCondition.="id=".$id." OR ";
             }
             else{
-                $queryCondition.="id=".$ids[$i];
+                $queryCondition.="id=".$id;
             }
         }
         $qry="DELETE  FROM posta ".$queryCondition;
@@ -181,7 +185,7 @@ class Messages
             return true;
         }
         else{
-            return false;
+            return $qry;
         }
     }
 
