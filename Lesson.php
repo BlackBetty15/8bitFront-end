@@ -123,7 +123,7 @@ class Lesson
         $result=Connection::queryRequest($qry);
 
         if($result){
-            return 'Uspešno ste dodali kurs';
+            return 'Uspešno ste dodali lekciju';
         }
         else{
             return 'Došlo je do greške, pokušajte kasnije';

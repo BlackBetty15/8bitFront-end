@@ -63,6 +63,8 @@ $("body").on("click", ".saveChanges", function () {
                 }
             }
         });
+        getMyData();
+
     }
 });
 
@@ -88,9 +90,11 @@ $('body').on('click',"#addUserSubmit",function(){
         url: "testfile.php?action=add-user",
         data: data,
         success: function (response){
-            alert(response);
         }
     });
+    $("#addUserModal").modal();
+    users=getAll('get-all-users');
+    fillWithUsers(users);
 });
 $("body").on("click","#saveNewCours",function(){
 
@@ -110,6 +114,10 @@ $("body").on("click","#saveNewCours",function(){
             alert(response);
         }
     });
+    courses=getAll('get-courses');
+    fillWithCurses(courses);
+    $("input[name=cours_name]").val('');
+    $("textarea[name=cours_description]").val('');
 });
 
 $("body").on("click","#btnAddLessonSubmit",function(){
@@ -130,8 +138,11 @@ $("body").on("click","#btnAddLessonSubmit",function(){
         data: data,
         success: function (response){
             alert(response);
+            lessons=getAll('get-all-lessons');
+            fillWithLessons(lessons);
         }
     });
+
 
 });
 $("body").on("click",".deleteEvent",function(){
@@ -152,6 +163,12 @@ $("body").on("click",".deleteEvent",function(){
             alert(response);
         }
     });
+    courses=getAll('get-courses');
+    fillWithCurses(courses);
+    users=getAll('get-all-users');
+    fillWithUsers(users);
+    lessons=getAll('get-all-lessons');
+    fillWithLessons(lessons);
 });
 $("body").on("click","#changePassword",function(){
 
@@ -288,10 +305,21 @@ $("body").on("change","#actionDropdown",function(){
 
     $thisButton=this;
     var action=  $("select[name=actionDropdown]").find(":selected").val();
-    alert("Action selected:"+action);
     var checkboxes=document.getElementsByClassName('receivedCheck');
     var ids=[];
     var request;
+
+    if($boxState==0){
+        if(action==0){
+            request="delete-messages";
+        }
+        else{
+            request="mark-as-read-message";
+        }
+    }
+    if($boxState==1){
+        request='delete-sent-messages';
+    }
 
     for(var i=0;i<checkboxes.length;i++){
 
@@ -301,36 +329,19 @@ $("body").on("change","#actionDropdown",function(){
             ids.push(id);
         }
     }
-    if(action==0){
         if(!isEmpty(ids)){
         $.ajax({
             type:"POST",
             async:false,
-            url:"testfile.php?action=delete-messages",
+            url:"testfile.php?action="+request,
             data:{id_array:ids},
             success:function(response){
-                alert(response);
 
             }
-        })
+        });
         }
 
-    }
-    if(action==1){
-        if(!isEmpty(ids)){
-            $.ajax({
-                type:"POST",
-                async:false,
-                url:"testfile.php?action=mark-as-read-message",
-                data:{id_array:ids},
-                success:function(response){
-                    alert(response);
-
-                }
-            })
-        }
-    }
-
+if($boxState==0){
     messages=getAll('get-all-messages');
     unreadMessages=0;
     fillWithMessages(messages);
@@ -340,7 +351,17 @@ $("body").on("change","#actionDropdown",function(){
     document.getElementById('actionDropdown').innerHTML=' ' +
         '<option value="2" disabled selected>Izaberi opciju</option>'+
         '<option value="0">Obriši</option>'+
-        ' <option value="1">Označi kao pročitano</option>';
+        ' <option value="1">Označi kao pročitano</option>';}
+    if($boxState==1){
+
+        document.getElementById("who").innerText="Primalac";
+        document.getElementById('subjectField').style.display='none';
+        document.getElementById('optionMarkRead').style.display='none';
+        sentMessages=getAll('get-all-sent-messages');
+
+        fillWithSent(sentMessages);
+    }
+
 });
 $("body").on("click","#inboxReceive",function(){
     messages=getAll('get-all-messages');

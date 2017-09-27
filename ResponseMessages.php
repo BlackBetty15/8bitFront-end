@@ -116,15 +116,29 @@ class ResponseMessages
         }
     }
 
-    public static function deleteMessage($id)
+    public static function deleteMessages($ids)
     {
-        $qry = " DELETE FROM moje_poruke WHERE id=$id";
+        $queryCondition='WHERE ';
+        $size=sizeof($ids);
+
+        for($i=0;$i<$size;$i++){
+            $id=$ids[$i];
+            $id=(int) $id;
+            if($i!=$size-1){
+
+                $queryCondition.="id=".$id." OR ";
+            }
+            else{
+                $queryCondition.="id=".$id;
+            }
+        }
+        $qry = " DELETE FROM moje_poruke ".$queryCondition;
         $result = Connection::queryRequest($qry);
 
         if ($result) {
             return true;
         } else {
-            return false;
+            return $qry;
         }
     }
 

@@ -134,8 +134,8 @@ function displayError(errorMsg) {
 function checkPwd(event, fieldId) {
 
     //Original password field and repeated password field
-    var str = document.getElementsByClassName('passOrg').item(0).value;
-    var repPwd = document.getElementsByClassName('passRep').item(0).value;
+    var str = document.getElementsByClassName('passOrgUser').item(0).value;
+    var repPwd = document.getElementsByClassName('passRepUser').item(0).value;
 
 
     //error and warning fields
@@ -166,10 +166,10 @@ function checkPwd(event, fieldId) {
         default:
         {
             if (CapsLock.isOn()) {
-                capsLabel.item(0).innerText = 'Caps Lock is on';
+                capsLabel.item(2).innerText = 'Caps Lock is on';
             }
             else {
-                capsLabel.item(0).innerText = '';
+                capsLabel.item(3).innerText = '';
             }
             break;
         }
@@ -989,6 +989,111 @@ function openSentMessage(e){
     });
     document.getElementById('messageFull').innerText=content;
 
+}
+
+function checkPwdUser(event, fieldId) {
+
+    //Original password field and repeated password field
+    var str = document.getElementsByClassName('passOrgUser').item(0).value;
+    var repPwd = document.getElementsByClassName('passRepUser').item(0).value;
+
+
+    //error and warning fields
+    var errorFieldRepeated = document.getElementsByClassName('repeatPasswordErrorUser').item(0);
+    var errorFieldOriginal = document.getElementsByClassName('originalPasswordErrorUser').item(0);
+    var color = '#d27776';
+
+    errorFieldOriginal.style.color = color;
+    errorFieldOriginal.style.color = color;
+
+    var capsLabel = document.getElementsByClassName('capsWarning');
+
+    var submitBtn = document.getElementById('addUserSubmit');
+    var criteriaErrorStatus = false; //false, to check if everything is alright, if it's false, error exists
+    var matchErrorStatus = false;
+    switch (event.keyCode) {
+        // ignores alt, crtl, shift keys and arrow keys
+        case 18:
+        case 17:
+        case 16:
+        case 37:
+        case 38:
+        case 39:
+        case 40:
+            console.log(event.keyCode);
+            break;
+        //Every other key//
+        default:
+        {
+            if (CapsLock.isOn()) {
+                capsLabel.item(0).innerText = 'Caps Lock is on';
+            }
+            else {
+                capsLabel.item(0).innerText = '';
+            }
+            break;
+        }
+    }
+
+    if (fieldId == 1) {
+
+        var response = checkCriteria(str);
+        console.log("prvi element: " + response[0] + "drugi element" + response[1]);
+        criteriaErrorStatus = response[1];
+        if (criteriaErrorStatus) {
+            errorFieldOriginal.style.color = 'green';
+        }
+        else {
+            errorFieldOriginal.style.color = color;
+        }
+
+        errorFieldOriginal.innerText = response[0];
+
+        if (repPwd != '') {
+            response = checkMatch(str, repPwd);
+            matchErrorStatus = response[1];
+            if (matchErrorStatus) {
+                errorFieldRepeated.style.color = 'green';
+            }
+            else {
+                errorFieldRepeated.style.color = color;
+            }
+            errorFieldRepeated.innerText = response[0];
+
+            if (criteriaErrorStatus && matchErrorStatus) {
+                submitBtn.disabled = false;
+            }
+            else {
+                submitBtn.disabled = true;
+            }
+        }
+    }
+    if (fieldId == 2) {
+
+        if (str === '') {
+            errorFieldRepeated.style.color = color;
+            errorFieldRepeated.innerText = errorMessages.passEmpty;
+        }
+        else {
+            errorFieldOriginal.style.color = 'green';
+            response = checkMatch(str, repPwd);
+            matchErrorStatus = response[1];
+            if (matchErrorStatus) {
+                errorFieldRepeated.style.color = 'green';
+            }
+            else {
+                errorFieldRepeated.style.color = color;
+            }
+            errorFieldRepeated.innerText = response[0];
+
+            response = checkCriteria(str);
+            criteriaErrorStatus = response[1];
+            response ? errorFieldOriginal.color = 'green' : errorFieldOriginal.color = color;
+            (criteriaErrorStatus && matchErrorStatus) ? submitBtn.disabled = false : submitBtn.disabled = true;
+
+
+        }
+    }
 }
 $('document').ready(
     getRoles(),

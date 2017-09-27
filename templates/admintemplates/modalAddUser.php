@@ -19,17 +19,17 @@
             <input type="email" class="formField important" id="eMail" name="email" placeholder="E-mail">
             <input type="text" class="formField important" id="username" name="username" placeholder="Korisničko ime">
 
-            <input type="password" class="formField important passOrg" id="pwd" name="pwd" placeholder="Lozinka"
-                   onkeyup="checkPwd(event, 1)">
+            <input type="password" class="formField important passOrgUser" id="pwd" name="pwd" placeholder="Lozinka"
+                   onkeyup="checkPwdUser(event, 1)">
 
-            <div class="originalPasswordError"></div>
+            <div class="originalPasswordErrorUser"></div>
             <p class="capsWarning"></p>
 
-            <input type="password" class="formField important passRep" id="pwdRep" name="pwd_repeat"
+            <input type="password" class="formField important passRepUser" id="pwdRep" name="pwd_repeat"
                    placeholder="Ponovljena lozinka"
-                   onkeyup="checkPwd(event, 2)">
+                   onkeyup="checkPwdUser(event, 2)">
 
-            <div class="repeatPasswordError" ></div>
+            <div class="repeatPasswordErrorUser" ></div>
             <p class="capsWarning"> </p>
 
             <br>
@@ -46,7 +46,7 @@
 
             </select>
             <div class="errorLog"></div>
-            <input type="submit" class="submitBtn" id="addUserSubmit" value="Dodaj krosinika">
+            <input type="submit" class="submitBtn" id="addUserSubmit" data-dismiss="modal" value="Dodaj krosinika">
         </form>
 
     </div>

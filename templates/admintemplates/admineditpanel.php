@@ -304,18 +304,7 @@ if (!isset($_SESSION['idKorisnik']) || !isset($_SESSION['role']) || !isset($_SES
 
 <!-- modal dialogs-->
 
-<!-- delete user modal, remove languages, deactivate, and other yes-no type questions -->
-<div class="modal fade" id="questionModal" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
 
-            <div class="modal-body">
-                <!--                --><?php //include_once 'modalQuestion.php' ?>
-            </div>
-
-        </div>
-    </div>
-</div>
 <div class="modal fade" id="addUserModal" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">

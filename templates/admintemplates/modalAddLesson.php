@@ -78,6 +78,6 @@
     </div>
     <div class="errorLog"></div><br>
     <div id="buttonContainer">
-    <input type="submit" class="submitBtn" id="btnAddLessonSubmit" value="Sačuvaj lekciju">
+    <input type="submit" class="submitBtn" id="btnAddLessonSubmit" data-dismiss="modal" value="Sačuvaj lekciju">
     </div>
 </form>

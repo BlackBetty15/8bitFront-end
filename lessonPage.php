@@ -50,7 +50,8 @@ require_once "Lesson.php";
                     <div class="container">
 
 
-                        <iframe src="templates/usertemplates/iframeSorce.html" id="iframeCode">
+                        <iframe src="templates/usertemplates/iframeSorce.html" id="iframeCode"
+                                sandbox="allow-scripts">
 
                        </iframe>
 
